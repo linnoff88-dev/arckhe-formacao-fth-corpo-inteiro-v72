@@ -52,7 +52,7 @@ def main():
             n1 += 1
         mujoco.mj_step(m, d)  # PD do motor (atuador de posição) + física
         n0 += 1
-    mujoco.mj_kinematics(m, d)
+    mujoco.mj_kARCKHÉtics(m, d)
     erro = np.linalg.norm(d.xpos[mao] - alvo) * 100
     print(f"simulado: {a.segundos:g} s · passo de física {m.opt.timestep * 1000:g} ms")
     print(f"tarefa (VLA: S2+S1)      : {n2:4d} chamadas ({n2 / a.segundos:g} Hz)")

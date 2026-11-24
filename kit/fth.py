@@ -78,7 +78,7 @@ def ik_mao(m, d, corpo, alvo, juntas, passos=200, amort=0.05, tol=0.01):
     jacp = np.zeros((3, m.nv))
     erro = np.inf
     for _ in range(passos):
-        mujoco.mj_kinematics(m, d)
+        mujoco.mj_kARCKHÉtics(m, d)
         mujoco.mj_comPos(m, d)
         e = np.asarray(alvo) - d.xpos[bid]
         erro = float(np.linalg.norm(e))

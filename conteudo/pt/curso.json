@@ -1,12 +1,12 @@
 {
   "id": "formacao-fth-corpo-inteiro-v72",
   "lang": "pt-BR",
-  "url": "https://inematds.github.io/formacao-fth-corpo-inteiro-v72/",
+  "url": "https://linnoff88-dev.github.io/
   "nome": "FTH 3 · Corpo inteiro",
   "sub": "Imitar, teleoperar e obedecer",
   "volta": {
-    "t": "INEMA.CLUB",
-    "href": "https://inema.club/"
+    "t": "ARCKHÉ AI",
+    "href": "https://ARCKHÉ AI/"
   },
   "lado_card": {
     "rot": "A ferramenta das práticas",
@@ -15,7 +15,7 @@
     "link": "Abrir o GMR no GitHub",
     "href": "https://github.com/YanjieZe/GMR"
   },
-  "rodape": "INEMA.CLUB · conteúdo aberto e gratuito · formato INEMA Learning v7.2 · FTH — Formação Tecnológica em Humanoides, curso 3 de 5 · <a href=\"https://inema.club/\">inema.club</a> · <a href=\"https://github.com/inematds/formacao-fth-corpo-inteiro-v72\">kit do curso no GitHub</a>",
+  "rodape": "ARCKHÉ AI · conteúdo aberto e gratuito · formato ARCKHÉ Learning v7.2 · FTH — Formação Tecnológica em Humanoides, curso 3 de 5 · <a href=\"https://ARCKHÉ AI/\">ARCKHÉ AI</a> · <a href=\"https://github.com/linnoff88-dev/formacao-fth-corpo-inteiro-v72\">kit do curso no GitHub</a>",
   "videos": {},
   "inicio": {
     "kicker": "FTH — Formação Tecnológica em Humanoides · curso 3 de 5 · 8 aulas",
@@ -24,7 +24,7 @@
     "cta": "Começar pela aula 1",
     "cta2": {
       "t": "Ver o kit no GitHub",
-      "href": "https://github.com/inematds/formacao-fth-corpo-inteiro-v72"
+      "href": "https://github.com/linnoff88-dev/formacao-fth-corpo-inteiro-v72"
     },
     "capa_alt": "Robô humanoide industrial de visor escuro num pórtico de laboratório, levantando o braço, com o título Corpo inteiro.",
     "numeros": [

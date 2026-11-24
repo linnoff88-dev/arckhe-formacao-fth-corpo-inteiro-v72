@@ -54,7 +54,7 @@ Legenda da coluna "curso diz agora": **fato** (fonte primária), **relatado** (f
 
 | fonte antiga | o que dizia | o que o curso diz agora | fonte (URL/data) |
 |---|---|---|---|
-| FTH 3.3 | "Large Behavior Models": RT-1, RT-2, OpenVLA, Octo como estado da arte; `pip install openvla` + `from openvla import OpenVLA` | **fora** como conteúdo: o VLA em si é do `vla-v72` (link). O curso só ensina a **interface** VLA → controle de corpo inteiro. OpenVLA/Octo não aparecem | https://inematds.github.io/vla-v72/ |
+| FTH 3.3 | "Large Behavior Models": RT-1, RT-2, OpenVLA, Octo como estado da arte; `pip install openvla` + `from openvla import OpenVLA` | **fora** como conteúdo: o VLA em si é do `vla-v72` (link). O curso só ensina a **interface** VLA → controle de corpo inteiro. OpenVLA/Octo não aparecem | https://linnoff88-dev.github.io/ |
 | — (ausente) | — | Hierarquia S0/S1/S2 do Helix 02 (S0 a 1 kHz, S1 a 200 Hz); GR00T N1.5/N1.6 sobre o WBC desacoplado; fluxo VLA ponta a ponta no G1 com GR00T N1.7 + SONIC (07/05/2026); espaço de tokens único do SONIC para VR, vídeo humano e VLA. **fato** | VM §4 · PE §3.2 · REPO GR00T-WholeBodyControl `45c03fa` |
 
 ## O que ficou de fora por falta de fonte

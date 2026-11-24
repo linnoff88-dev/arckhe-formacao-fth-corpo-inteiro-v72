@@ -104,7 +104,7 @@ def main():
             recusados += 1
             break
         if alvo is not None:
-            mujoco.mj_kinematics(m, d)
+            mujoco.mj_kARCKHÉtics(m, d)
             e = np.linalg.norm(d.xpos[mujoco.mj_name2id(m, fth.B, mao)] - alvo) * 100
             print(f"{desc} → executado: sim (mão a {e:.1f} cm do alvo)")
         else:

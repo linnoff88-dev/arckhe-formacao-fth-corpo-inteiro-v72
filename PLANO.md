@@ -1,6 +1,6 @@
 # PLANO — FTH 3 · Corpo inteiro: imitar, teleoperar e obedecer (formacao-fth-corpo-inteiro-v72)
 
-Curso 3 de 5 da **FTH — Formação Tecnológica em Humanoides** (v7.2, PT/EN/ES). Público: quem programa em Python, já viu ROS 2 e quer trabalhar com humanoides sem ter um. Fronteira: o VLA em si é do [`vla-v72`](https://inematds.github.io/vla-v72/) (aulas 2 e 7); aqui é o **controle de corpo inteiro (S0)** que executa. Toda prática roda em CPU, em segundos, com saída determinística.
+Curso 3 de 5 da **FTH — Formação Tecnológica em Humanoides** (v7.2, PT/EN/ES). Público: quem programa em Python, já viu ROS 2 e quer trabalhar com humanoides sem ter um. Fronteira: o VLA em si é do [`vla-v72`](https://linnoff88-dev.github.io/ (aulas 2 e 7); aqui é o **controle de corpo inteiro (S0)** que executa. Toda prática roda em CPU, em segundos, com saída determinística.
 
 ## Versões testadas nesta máquina (19/10/2026, aarch64 / NVIDIA GB10, Ubuntu, Python 3.12.3)
 | item | versão | como |
@@ -39,5 +39,5 @@ Saídas de erro comum capturadas: `e1-frequencia` (aula 1, S0 a 30 Hz não divid
 `simfila` na aula 8: a cadeia de quatro etapas com falha na checagem de segurança na 1ª execução (ajusta e roda de novo). Sem `simconversa`.
 
 ## Links fixos
-- Curso seguinte (aula 8, `links`): https://inematds.github.io/formacao-fth-operar-v72/ (ainda não publicado em 19/10/2026 — 404 esperado no `validar --links`).
+- Curso seguinte (aula 8, `links`): https://linnoff88-dev.github.io/ (ainda não publicado em 19/10/2026 — 404 esperado no `validar --links`).
 - Donos externos: vla-v72 (VLA, aulas 2 e 7), cursos 0, 1 e 2 da FTH (corpo, PD/recompensa, sim2sim), robot (ROS 2).

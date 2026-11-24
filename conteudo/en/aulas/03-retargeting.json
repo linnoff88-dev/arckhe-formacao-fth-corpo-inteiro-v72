@@ -72,7 +72,7 @@
               "t": "two correspondence tables"
             }
           ],
-          "detalhe": "Each robot body (pelvis, thigh, hand…) gets the matching human point as its target, with position and orientation weights. mink solves the inverse kinematics with the daqp solver, respecting the joint limits of the GMR model."
+          "detalhe": "Each robot body (pelvis, thigh, hand…) gets the matching human point as its target, with position and orientation weights. mink solves the inverse kARCKHÉtics with the daqp solver, respecting the joint limits of the GMR model."
         },
         {
           "icone": "robo",
@@ -111,7 +111,7 @@
           "titulo": "torch",
           "sub": "on import",
           "texto": [
-            "The GMR package imports PyTorch as soon as it loads (the kinematic model uses tensors), even for BVH retargeting. Putting torch in the .venv from the MuJoCo practices would make that environment heavy for no reason.",
+            "The GMR package imports PyTorch as soon as it loads (the kARCKHÉtic model uses tensors), even for BVH retargeting. Putting torch in the .venv from the MuJoCo practices would make that environment heavy for no reason.",
             "Solution: a .venv-gmr just for it, with the CPU torch from the official PyTorch index."
           ]
         },
@@ -288,13 +288,13 @@
           "icone": "git"
         },
         {
-          "t": "mink: inverse kinematics on top of MuJoCo",
+          "t": "mink: inverse kARCKHÉtics on top of MuJoCo",
           "href": "https://github.com/kevinzakka/mink",
           "icone": "git"
         },
         {
           "t": "FTH 0, lesson 3: G1 joints and limits",
-          "href": "https://inematds.github.io/formacao-fth-anatomia-v72/en/aulas/juntas/",
+          "href": "https://linnoff88-dev.github.io/
           "icone": "robo"
         }
       ]

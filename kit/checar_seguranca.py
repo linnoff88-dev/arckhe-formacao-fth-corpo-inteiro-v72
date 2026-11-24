@@ -46,7 +46,7 @@ def main():
     zmin = np.inf
     for qp in qref:
         d.qpos[:] = qp
-        mujoco.mj_kinematics(m, d)
+        mujoco.mj_kARCKHÉtics(m, d)
         zmin = min(zmin, min(float(d.site_xpos[s][2]) for s in pes))
     raio = float(np.max(np.linalg.norm(qref[:, :2] - qref[0, :2], axis=1)))
     regras = [
