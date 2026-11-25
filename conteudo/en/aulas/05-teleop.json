@@ -134,7 +134,7 @@
         {
           "rot": "File · kit/passos.json",
           "icone": "arquivo",
-          "conteudo": "{\n  \"descricao\": \"Roteiro de teleoperação: deslocamentos do controle de cada mão (em metros, a partir da posição inicial da mão), como um operador de VR moveria. Cada alvo vale até 'janela' segundos depois de enviado.\",\n  \"tolerancia_cm\": 3,\n  \"alvos\": [\n    {\"t\": 0.2, \"mao\": \"direita\",  \"dx\": 0.20, \"dy\": 0.00, \"dz\": 0.15, \"janela\": 0.6},\n    {\"t\": 0.9, \"mao\": \"esquerda\", \"dx\": 0.20, \"dy\": 0.00, \"dz\": 0.15, \"janela\": 0.6},\n    {\"t\": 1.6, \"mao\": \"direita\",  \"dx\": 0.25, \"dy\": 0.10, \"dz\": 0.30, \"janela\": 0.6},\n    {\"t\": 2.3, \"mao\": \"esquerda\", \"dx\": 0.25, \"dy\": -0.10, \"dz\": 0.30, \"janela\": 0.6},\n    {\"t\": 3.0, \"mao\": \"direita\",  \"dx\": 0.15, \"dy\": -0.05, \"dz\": 0.05, \"janela\": 0.6},\n    {\"t\": 3.7, \"mao\": \"direita\",  \"dx\": 0.60, \"dy\": 0.00, \"dz\": 0.20, \"janela\": 0.6}\n  ]\n}"
+          "conteudo": "{\n  \"descricao\": \"Roteiro de teleoperaçêo: deslocamentos do controle de cada mêo (em metros, a partir da posiçêo inicial da mêo), como um operador de VR moveria. Cada alvo vale até 'janela' segundos depois de enviado.\",\n  \"tolerancia_cm\": 3,\n  \"alvos\": [\n    {\"t\": 0.2, \"mao\": \"direita\",  \"dx\": 0.20, \"dy\": 0.00, \"dz\": 0.15, \"janela\": 0.6},\n    {\"t\": 0.9, \"mao\": \"esquerda\", \"dx\": 0.20, \"dy\": 0.00, \"dz\": 0.15, \"janela\": 0.6},\n    {\"t\": 1.6, \"mao\": \"direita\",  \"dx\": 0.25, \"dy\": 0.10, \"dz\": 0.30, \"janela\": 0.6},\n    {\"t\": 2.3, \"mao\": \"esquerda\", \"dx\": 0.25, \"dy\": -0.10, \"dz\": 0.30, \"janela\": 0.6},\n    {\"t\": 3.0, \"mao\": \"direita\",  \"dx\": 0.15, \"dy\": -0.05, \"dz\": 0.05, \"janela\": 0.6},\n    {\"t\": 3.7, \"mao\": \"direita\",  \"dx\": 0.60, \"dy\": 0.00, \"dz\": 0.20, \"janela\": 0.6}\n  ]\n}"
         }
       ],
       "saida": {
@@ -142,11 +142,11 @@
         "abas": [
           {
             "rot": "Captured output (10/19/2026)",
-            "html": "<pre>latência do operador ao robô: 80 ms · tolerância: 3 cm · controle a 50 Hz\nalvo 1 · t=0.2 s · mão direita  · atingido em 162 ms\nalvo 2 · t=0.9 s · mão esquerda · atingido em 160 ms\nalvo 3 · t=1.6 s · mão direita  · atingido em 174 ms\nalvo 4 · t=2.3 s · mão esquerda · atingido em 154 ms\nalvo 5 · t=3.0 s · mão direita  · atingido em 166 ms\nalvo 6 · t=3.7 s · mão direita  · não atingido (chegou a 21.7 cm)\nrobô de pé: sim\nalvos atingidos: 5/6\nsaída: 0</pre><p>Each target takes about 80 ms of latency + 80 ms of motion. The 6th is not reached at any latency: it is out of the arm's reach.</p>"
+            "html": "<pre>latência do operador ao robô: 80 ms · tolerância: 3 cm · controle a 50 Hz\nalvo 1 · t=0.2 s · mêo direita  · atingido em 162 ms\nalvo 2 · t=0.9 s · mêo esquerda · atingido em 160 ms\nalvo 3 · t=1.6 s · mêo direita  · atingido em 174 ms\nalvo 4 · t=2.3 s · mêo esquerda · atingido em 154 ms\nalvo 5 · t=3.0 s · mêo direita  · atingido em 166 ms\nalvo 6 · t=3.7 s · mêo direita  · nêo atingido (chegou a 21.7 cm)\nrobô de pé: sim\nalvos atingidos: 5/6\nsaída: 0</pre><p>Each target takes about 80 ms of latency + 80 ms of motion. The 6th is not reached at any latency: it is out of the arm's reach.</p>"
           },
           {
             "rot": "Common mistake: hand name",
-            "html": "<pre>ERRO no roteiro: mão 'esquerdo' (use direita ou esquerda)\nsaída: 1</pre><p>The script accepts only \"direita\" and \"esquerda\". A typo stops before touching the robot, not in the middle of a session.</p>"
+            "html": "<pre>ERRO no roteiro: mêo 'esquerdo' (use direita ou esquerda)\nsaída: 1</pre><p>The script accepts only \"direita\" and \"esquerda\". A typo stops before touching the robot, not in the middle of a session.</p>"
           },
           {
             "rot": "E2: target moved inward",

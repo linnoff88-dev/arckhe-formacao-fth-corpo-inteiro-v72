@@ -146,7 +146,7 @@
         {
           "rot": "File · kit/comandos.json",
           "icone": "arquivo",
-          "conteudo": "{\n  \"descricao\": \"Saída de alto nível, como a de um VLA a poucos Hz: o QUÊ fazer. Alvos da mão em metros, relativos à pelve (x para a frente, y para a esquerda, z para cima).\",\n  \"comandos\": [\n    {\"acao\": \"alcancar\", \"mao\": \"direita\", \"alvo_m\": [0.30, -0.20, 0.15]},\n    {\"acao\": \"girar_tronco\", \"graus\": 20},\n    {\"acao\": \"alcancar\", \"mao\": \"esquerda\", \"alvo_m\": [0.30, 0.25, 0.20]},\n    {\"acao\": \"voltar\"}\n  ]\n}"
+          "conteudo": "{\n  \"descricao\": \"Saída de alto nível, como a de um VLA a poucos Hz: o QUÊ fazer. Alvos da mêo em metros, relativos à pelve (x para a frente, y para a esquerda, z para cima).\",\n  \"comandos\": [\n    {\"acao\": \"alcancar\", \"mao\": \"direita\", \"alvo_m\": [0.30, -0.20, 0.15]},\n    {\"acao\": \"girar_tronco\", \"graus\": 20},\n    {\"acao\": \"alcancar\", \"mao\": \"esquerda\", \"alvo_m\": [0.30, 0.25, 0.20]},\n    {\"acao\": \"voltar\"}\n  ]\n}"
         }
       ],
       "saida": {
@@ -154,11 +154,11 @@
         "abas": [
           {
             "rot": "Captured output (10/19/2026)",
-            "html": "<pre>comando 1 · alcancar direita (0.3, -0.2, 0.15) → executado: sim (mão a 1.1 cm do alvo)\ncomando 2 · girar_tronco 20° → executado: sim\ncomando 3 · alcancar esquerda (0.3, 0.25, 0.2) → executado: sim (mão a 1.0 cm do alvo)\ncomando 4 · voltar → executado: sim\nrobô de pé: sim · pelve a 0.79 m\nexecutado: sim\nsaída: 0</pre><p>Four commands, four executions, hand about 1 cm from each target, and the robot standing at the end.</p>"
+            "html": "<pre>comando 1 · alcancar direita (0.3, -0.2, 0.15) → executado: sim (mêo a 1.1 cm do alvo)\ncomando 2 · girar_tronco 20° → executado: sim\ncomando 3 · alcancar esquerda (0.3, 0.25, 0.2) → executado: sim (mêo a 1.0 cm do alvo)\ncomando 4 · voltar → executado: sim\nrobô de pé: sim · pelve a 0.79 m\nexecutado: sim\nsaída: 0</pre><p>Four commands, four executions, hand about 1 cm from each target, and the robot standing at the end.</p>"
           },
           {
             "rot": "Common mistake: impossible command",
-            "html": "<pre>comando 1 · alcancar direita (0.9, -0.2, 0.15) → recusado: alvo a 0.92 m do ombro; o braço alcança 0.38 m\ncomando 2 · girar_tronco 200° → recusado: fora do limite da cintura (-150° a 150°)\ncomando 3 · pular → recusado: ação desconhecida (conheço alcancar, girar_tronco, voltar)\nrobô de pé: sim · pelve a 0.79 m\nexecutado: não · 3 comando(s) recusado(s)\nsaída: 1</pre><p>Target 92 cm from the shoulder (the arm reaches 38 cm to the wrist), waist at 200° (the limit is 150°), and an action that doesn't exist: all three are refused before any movement, and the robot stays still and standing.</p>"
+            "html": "<pre>comando 1 · alcancar direita (0.9, -0.2, 0.15) → recusado: alvo a 0.92 m do ombro; o braço alcança 0.38 m\ncomando 2 · girar_tronco 200° → recusado: fora do limite da cintura (-150° a 150°)\ncomando 3 · pular → recusado: açêo desconhecida (conheço alcancar, girar_tronco, voltar)\nrobô de pé: sim · pelve a 0.79 m\nexecutado: nêo · 3 comando(s) recusado(s)\nsaída: 1</pre><p>Target 92 cm from the shoulder (the arm reaches 38 cm to the wrist), waist at 200° (the limit is 150°), and an action that doesn't exist: all three are refused before any movement, and the robot stays still and standing.</p>"
           }
         ]
       }
@@ -180,7 +180,7 @@
           "titulo": "E2 · Bad commands",
           "min": "5 min",
           "texto": "Run the bad commands file and read the reason for each refusal.",
-          "pronto": "<code>python3 kit/comando_wbc.py --comandos kit/comandos-ruins.json | tail -1</code> → <code>executado: não · 3 comando(s) recusado(s)</code>."
+          "pronto": "<code>python3 kit/comando_wbc.py --comandos kit/comandos-ruins.json | tail -1</code> → <code>executado: nêo · 3 comando(s) recusado(s)</code>."
         },
         {
           "id": "e3",

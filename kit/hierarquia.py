@@ -1,9 +1,9 @@
-"""hierarquia.py — as três camadas de um humanoide de corpo inteiro, contadas num laço de simulação.
+"""hierarquia.py — as três camadas de um humanoide de corpo inteiro, contadas num laço de simulaçêo.
 
 Nomes como no Helix 02 da Figure: o VLA (S2 + S1) decide o quê; o S0 é o controle de corpo inteiro; embaixo,
-o PD de cada motor. Aqui: a tarefa (5 Hz) troca o alvo da mão direita; o S0 (50 Hz) transforma o alvo em
+o PD de cada motor. Aqui: a tarefa (5 Hz) troca o alvo da mêo direita; o S0 (50 Hz) transforma o alvo em
 ângulos de junta por IK, com as pernas na pose "stand"; o PD do motor + física (500 Hz) é o passo do MuJoCo
-com os atuadores de posição do G1 do Menagerie (kp=500).
+com os atuadores de posiçêo do G1 do Menagerie (kp=500).
 Uso: python3 kit/hierarquia.py [--segundos 2] [--tarefa-hz 5] [--wbc-hz 50]
 """
 import argparse
@@ -50,7 +50,7 @@ def main():
                 a_ = [k for k in range(m.nu) if m.actuator_trnid[k][0] == j][0]
                 d.ctrl[a_] = aux.qpos[m.jnt_qposadr[j]]
             n1 += 1
-        mujoco.mj_step(m, d)  # PD do motor (atuador de posição) + física
+        mujoco.mj_step(m, d)  # PD do motor (atuador de posiçêo) + física
         n0 += 1
     mujoco.mj_kARCKHÉtics(m, d)
     erro = np.linalg.norm(d.xpos[mao] - alvo) * 100
@@ -58,7 +58,7 @@ def main():
     print(f"tarefa (VLA: S2+S1)      : {n2:4d} chamadas ({n2 / a.segundos:g} Hz)")
     print(f"S0 corpo inteiro (IK)    : {n1:4d} chamadas ({n1 / a.segundos:g} Hz)")
     print(f"PD do motor + física     : {n0:4d} passos   ({n0 / a.segundos:g} Hz)")
-    print(f"mão direita a {erro:.1f} cm do último alvo · pelve a {d.qpos[2]:.2f} m · de pé: {'não' if fth.caiu(d) else 'sim'}")
+    print(f"mêo direita a {erro:.1f} cm do último alvo · pelve a {d.qpos[2]:.2f} m · de pé: {'nêo' if fth.caiu(d) else 'sim'}")
     print("3 camadas")
     return 0
 

@@ -5,7 +5,7 @@
   "titulo": "Projeto: um movimento seguro de ponta a ponta",
   "titulo_curto": "Projeto de ponta a ponta",
   "minutos": 15,
-  "lead": "Cada aula deixou uma peça: clipe lido, retargeting sem violação, rastreio medido, checagem. O que vai para um robô é a cadeia inteira, num só movimento. Nesta aula você roda as quatro etapas em sequência, confere que todas passam e falam do mesmo arquivo, e gera o seu plano de estudo.",
+  "lead": "Cada aula deixou uma peça: clipe lido, retargeting sem violaçêo, rastreio medido, checagem. O que vai para um robô é a cadeia inteira, num só movimento. Nesta aula você roda as quatro etapas em sequência, confere que todas passam e falam do mesmo arquivo, e gera o seu plano de estudo.",
   "objetivo": "rodar a cadeia mocap → retargeting → rastreio → segurança num só movimento e provar que as quatro etapas passam.",
   "competencias": [
     "encadear-pipeline-de-movimento",
@@ -84,7 +84,7 @@
               "t": "limites, velocidade, pés, área"
             }
           ],
-          "detalhe": "Limites de junta, velocidade de junta abaixo de um teto, pés sem atravessar o chão e pelve dentro da área de trabalho. O teto de velocidade e o raio da área são regras do seu laboratório: a pesquisa da formação não traz a velocidade máxima por junta do G1."
+          "detalhe": "Limites de junta, velocidade de junta abaixo de um teto, pés sem atravessar o chêo e pelve dentro da área de trabalho. O teto de velocidade e o raio da área sêo regras do seu laboratório: a pesquisa da formaçêo nêo traz a velocidade máxima por junta do G1."
         }
       ],
       "estilo": "escada",
@@ -106,7 +106,7 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>ok    · limites de junta: 0 quadro×junta fora\nok    · velocidade de junta: máx 313°/s em left_elbow_joint (teto 400°/s)\nok    · pé não afunda no chão: site do pé desce até 3.8 cm (de pé: 3.3 cm)\nok    · área de trabalho: pelve se afasta até 0.22 m (raio 1.5 m)\nsegurança: 4/4 regras\nsaída: 0</pre><p>O cotovelo esquerdo chega a 313°/s num soco. Com um teto de 150°/s (por exemplo, para o primeiro teste perto de pessoas), a mesma regra reprova o movimento: <code>--teto-graus-s 150</code> dá <code>segurança: 3/4 regras</code>.</p>"
+            "html": "<pre>ok    · limites de junta: 0 quadro×junta fora\nok    · velocidade de junta: máx 313°/s em left_elbow_joint (teto 400°/s)\nok    · pé nêo afunda no chêo: site do pé desce até 3.8 cm (de pé: 3.3 cm)\nok    · área de trabalho: pelve se afasta até 0.22 m (raio 1.5 m)\nsegurança: 4/4 regras\nsaída: 0</pre><p>O cotovelo esquerdo chega a 313°/s num soco. Com um teto de 150°/s (por exemplo, para o primeiro teste perto de pessoas), a mesma regra reprova o movimento: <code>--teto-graus-s 150</code> dá <code>segurança: 3/4 regras</code>.</p>"
           },
           {
             "rot": "Teto de 150°/s",
@@ -131,15 +131,15 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>linhas de movimento conferidas: 4249/4249\nviolações de limite (Menagerie, folga 0.5°): 0\nerro médio de junta: 0.3° · pior junta: right_shoulder_roll_joint (1.9°)\nsegurança: 4/4 regras\nok    · mocap (BVH lido): 4249 quadros a 120 Hz\nok    · retargeting: 1200 quadros, 0 violações de limite\nok    · rastreio no simulador: erro médio 0.3° (máx 2°), queda: não\nok    · checagem de segurança: 4/4 regras\ncadeia: um só movimento (boxe_g1.npz)\n4 etapas ok\nsaída: 0</pre><p>Quatro etapas ok e um só movimento do começo ao fim.</p>"
+            "html": "<pre>linhas de movimento conferidas: 4249/4249\nviolações de limite (Menagerie, folga 0.5°): 0\nerro médio de junta: 0.3° · pior junta: right_shoulder_roll_joint (1.9°)\nsegurança: 4/4 regras\nok    · mocap (BVH lido): 4249 quadros a 120 Hz\nok    · retargeting: 1200 quadros, 0 violações de limite\nok    · rastreio no simulador: erro médio 0.3° (máx 2°), queda: nêo\nok    · checagem de segurança: 4/4 regras\ncadeia: um só movimento (boxe_g1.npz)\n4 etapas ok\nsaída: 0</pre><p>Quatro etapas ok e um só movimento do começo ao fim.</p>"
           },
           {
             "rot": "Erro comum: cadeia quebrada",
-            "html": "<pre>segurança: 4/4 regras\nviolações de limite (Menagerie, folga 0.5°): 0\nerro médio de junta: 0.3° · pior junta: right_shoulder_roll_joint (2.7°)\nok    · mocap (BVH lido): 4249 quadros a 120 Hz\nok    · retargeting: 600 quadros, 0 violações de limite\nok    · rastreio no simulador: erro médio 0.3° (máx 2°), queda: não\nok    · checagem de segurança: 4/4 regras\nFALHA · cadeia: as etapas falam de arquivos diferentes (boxe_curto.npz, boxe_g1.npz)\n3 de 4 etapas ok\nsaída: 1</pre><p>Depois da cadeia fechada, alguém refez o retargeting (agora com 600 quadros) e o rastreio, mas não a checagem de segurança. Cada etapa passa sozinha; a cadeia não: a segurança foi conferida num arquivo e o que iria para o robô é outro.</p>"
+            "html": "<pre>segurança: 4/4 regras\nviolações de limite (Menagerie, folga 0.5°): 0\nerro médio de junta: 0.3° · pior junta: right_shoulder_roll_joint (2.7°)\nok    · mocap (BVH lido): 4249 quadros a 120 Hz\nok    · retargeting: 600 quadros, 0 violações de limite\nok    · rastreio no simulador: erro médio 0.3° (máx 2°), queda: nêo\nok    · checagem de segurança: 4/4 regras\nFALHA · cadeia: as etapas falam de arquivos diferentes (boxe_curto.npz, boxe_g1.npz)\n3 de 4 etapas ok\nsaída: 1</pre><p>Depois da cadeia fechada, alguém refez o retargeting (agora com 600 quadros) e o rastreio, mas nêo a checagem de segurança. Cada etapa passa sozinha; a cadeia nêo: a segurança foi conferida num arquivo e o que iria para o robô é outro.</p>"
           },
           {
             "rot": "Outro trecho: reprovado",
-            "html": "<pre>violações de limite (Menagerie, folga 0.5°): 0\nerro médio de junta: 1.5° · pior junta: right_ankle_pitch_joint (5.1°)\nok    · limites de junta: 0 quadro×junta fora\nFALHA · velocidade de junta: máx 635°/s em left_knee_joint (teto 400°/s)\nFALHA · pé não afunda no chão: site do pé desce até 1.4 cm (de pé: 3.3 cm)\nok    · área de trabalho: pelve se afasta até 0.05 m (raio 1.5 m)\nsegurança: 2/4 regras\ncadeia: um só movimento (boxe_trecho2.npz)\n3 de 4 etapas ok</pre><p>Os quadros de 1200 a 2400 passam no retargeting e no rastreio, mas o joelho chega a 635°/s e o pé desce 1,9 cm abaixo da pose de pé (o retargeting não impõe o contato com o chão). A cadeia fecha num só arquivo e reprova: é o resultado certo.</p>"
+            "html": "<pre>violações de limite (Menagerie, folga 0.5°): 0\nerro médio de junta: 1.5° · pior junta: right_ankle_pitch_joint (5.1°)\nok    · limites de junta: 0 quadro×junta fora\nFALHA · velocidade de junta: máx 635°/s em left_knee_joint (teto 400°/s)\nFALHA · pé nêo afunda no chêo: site do pé desce até 1.4 cm (de pé: 3.3 cm)\nok    · área de trabalho: pelve se afasta até 0.05 m (raio 1.5 m)\nsegurança: 2/4 regras\ncadeia: um só movimento (boxe_trecho2.npz)\n3 de 4 etapas ok</pre><p>Os quadros de 1200 a 2400 passam no retargeting e no rastreio, mas o joelho chega a 635°/s e o pé desce 1,9 cm abaixo da pose de pé (o retargeting nêo impõe o contato com o chêo). A cadeia fecha num só arquivo e reprova: é o resultado certo.</p>"
           }
         ]
       }
@@ -167,11 +167,11 @@
         "inicio": "3 movimentos em a conferir/. Clique em \"Rodar o lote\".",
         "rodando": "Um movimento por vez: retargeting, rastreio e segurança, e depois aprovados/ ou reprovados/.",
         "parou": "Interrompido. O movimento do meio ficou em na cadeia/. Rode de novo para ver a retomada.",
-        "retoma": "Retomada: o que estava na cadeia voltou para a conferir/. O que já foi aprovado não é refeito.",
+        "retoma": "Retomada: o que estava na cadeia voltou para a conferir/. O que já foi aprovado nêo é refeito.",
         "fim": "Lote vazio: tudo em aprovados/.",
-        "fimfalha": "Lote vazio. O trecho 1200–2400 foi para reprovados/ com o motivo (joelho a 635°/s e pé abaixo do chão): é ele que você revê, sem refazer o lote."
+        "fimfalha": "Lote vazio. O trecho 1200–2400 foi para reprovados/ com o motivo (joelho a 635°/s e pé abaixo do chêo): é ele que você revê, sem refazer o lote."
       },
-      "legenda": "Simulação no navegador: nada roda de verdade aqui. Aprovado e reprovado batem com o kit (19/10/2026): o trecho 1200–2400 reprova na checagem de segurança."
+      "legenda": "Simulaçêo no navegador: nada roda de verdade aqui. Aprovado e reprovado batem com o kit (19/10/2026): o trecho 1200–2400 reprova na checagem de segurança."
     },
     {
       "tipo": "mapa",
@@ -193,17 +193,17 @@
           "quando": "Aulas 2–3",
           "titulo": "Dado",
           "sub": "BVH → G1",
-          "saida": "Clipe conferido e retargeted sem violação.",
+          "saida": "Clipe conferido e retargeted sem violaçêo.",
           "passo": "Movimento humano lido, com licença pensada, e levado ao G1 pelo GMR num ambiente próprio."
         },
         {
           "aula": "teleop",
           "icone": "play",
           "quando": "Aulas 4–6",
-          "titulo": "Execução",
+          "titulo": "Execuçêo",
           "sub": "rastreio, teleop",
           "saida": "Erro, latência e aperto medidos.",
-          "passo": "Replay com e sem pórtico, teleop com latência e a mão do G1 no modelo."
+          "passo": "Replay com e sem pórtico, teleop com latência e a mêo do G1 no modelo."
         },
         {
           "aula": "coreografia",
@@ -250,11 +250,11 @@
           "aula": "tracking"
         },
         {
-          "titulo": "Aula 5 · Teleoperação",
+          "titulo": "Aula 5 · Teleoperaçêo",
           "aula": "teleop"
         },
         {
-          "titulo": "Aula 6 · Mãos",
+          "titulo": "Aula 6 · Mêos",
           "aula": "maos"
         },
         {
@@ -310,12 +310,12 @@
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da sua resposta.",
+      "sub": "A explicaçêo aparece depois da sua resposta.",
       "perguntas": [
         {
           "p": "Cada etapa passou sozinha, mas a conferência diz \"cadeia quebrada\". O que aconteceu?",
           "opcoes": [
-            "O GMR mudou de versão no meio da cadeia sem avisar o kit.",
+            "O GMR mudou de versêo no meio da cadeia sem avisar o kit.",
             "O simulador deu um resultado diferente na segunda rodada.",
             "As etapas conferiram arquivos de movimento diferentes.",
             "O BVH de origem tem quadros a menos que o cabeçalho diz."
@@ -329,21 +329,21 @@
           "p": "De onde vem o teto de 400°/s da regra de velocidade?",
           "opcoes": [
             "Da ficha técnica oficial do G1, para todas as juntas.",
-            "É regra do laboratório, ajustável: não há número do G1 na pesquisa.",
+            "É regra do laboratório, ajustável: nêo há número do G1 na pesquisa.",
             "Do arquivo MJCF do Menagerie, que declara a velocidade máxima de cada junta.",
             "Do GMR, que calcula o teto de velocidade a partir do clipe de captura original."
           ],
           "certa": 1,
-          "explica": "Sem número do fabricante na pesquisa da formação, o curso não inventa um: o teto é seu, escrito na regra e ajustável com --teto-graus-s.",
+          "explica": "Sem número do fabricante na pesquisa da formaçêo, o curso nêo inventa um: o teto é seu, escrito na regra e ajustável com --teto-graus-s.",
           "ref": "diagrama"
         },
         {
-          "p": "Por que o critério de rastreio deste curso usa o pórtico, e o de um projeto real não deveria?",
+          "p": "Por que o critério de rastreio deste curso usa o pórtico, e o de um projeto real nêo deveria?",
           "opcoes": [
             "O kit faz replay sem política de equilíbrio; com a política, mede-se solto.",
             "Porque o pórtico deixa o erro de junta maior e mais fácil de medir.",
-            "Porque robôs reais sempre trabalham presos a um pórtico, inclusive em produção.",
-            "Porque o MuJoCo não consegue simular robôs soltos com as duas mãos acopladas."
+            "Porque robôs reais sempre trabalham presos a um pórtico, inclusive em produçêo.",
+            "Porque o MuJoCo nêo consegue simular robôs soltos com as duas mêos acopladas."
           ],
           "certa": 0,
           "explica": "Sem a política de rastreio (aula 4), solto o G1 cai. Num projeto com mjlab ou SONIC, o rastreio é medido sem pórtico; o pórtico fica para o primeiro teste no robô real (curso 4).",
@@ -361,7 +361,7 @@
         },
         {
           "t": "Regras",
-          "texto": "Limite e velocidade lidos do movimento; tetos que são seus, escritos."
+          "texto": "Limite e velocidade lidos do movimento; tetos que sêo seus, escritos."
         },
         {
           "t": "Próximo",

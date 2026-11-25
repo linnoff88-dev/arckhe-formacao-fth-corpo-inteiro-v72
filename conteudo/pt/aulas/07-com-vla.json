@@ -5,7 +5,7 @@
   "titulo": "Quando um VLA manda no corpo inteiro",
   "titulo_curto": "VLA sobre o corpo inteiro",
   "minutos": 15,
-  "lead": "Um VLA vê a cena, entende o pedido e propõe uma ação, poucas vezes por segundo. Quem transforma isso em movimento seguro de 29 juntas, sem cair, é o controle de corpo inteiro. Nesta aula você manda comandos de alto nível ao G1 simulado e vê o que ele executa e o que recusa antes de mexer.",
+  "lead": "Um VLA vê a cena, entende o pedido e propõe uma açêo, poucas vezes por segundo. Quem transforma isso em movimento seguro de 29 juntas, sem cair, é o controle de corpo inteiro. Nesta aula você manda comandos de alto nível ao G1 simulado e vê o que ele executa e o que recusa antes de mexer.",
   "objetivo": "mandar comandos de alto nível a um controle de corpo inteiro simulado e ver quais ele executa e quais recusa.",
   "competencias": [
     "ligar-vla-ao-controle-de-corpo-inteiro",
@@ -47,7 +47,7 @@
               "t": "\"ponha a caneca na prateleira\""
             }
           ],
-          "detalhe": "Vê a câmera, lê o pedido e gera a ação. No Helix 02 o S1 emite alvos de junta a 200 Hz; no GR00T N1.7 o S2 é um VLM de raciocínio e o S1 um modelo de difusão. Como funcionam por dentro é assunto do curso vla-v72."
+          "detalhe": "Vê a câmera, lê o pedido e gera a açêo. No Helix 02 o S1 emite alvos de junta a 200 Hz; no GR00T N1.7 o S2 é um VLM de raciocínio e o S1 um modelo de difusêo. Como funcionam por dentro é assunto do curso vla-v72."
         },
         {
           "icone": "enviar",
@@ -57,7 +57,7 @@
           "itens": [
             {
               "icone": "lista",
-              "t": "alvos de mão, tokens, juntas"
+              "t": "alvos de mêo, tokens, juntas"
             }
           ],
           "detalhe": "O que passa de cima para baixo. No SONIC é um espaço de tokens único (64 dimensões) que aceita VR, vídeo humano e VLA. No kit é um JSON com ações nomeadas (alcançar, girar o tronco, voltar)."
@@ -72,7 +72,7 @@
               "t": "fora do alcance, fora do limite"
             }
           ],
-          "detalhe": "A camada de baixo não executa às cegas: ação conhecida? junta dentro do limite? alvo ao alcance do braço? O que não passa é recusado com o motivo, e o robô fica como estava."
+          "detalhe": "A camada de baixo nêo executa às cegas: açêo conhecida? junta dentro do limite? alvo ao alcance do braço? O que nêo passa é recusado com o motivo, e o robô fica como estava."
         },
         {
           "icone": "camadas",
@@ -96,11 +96,11 @@
               "t": "executado, robô de pé"
             }
           ],
-          "detalhe": "O mesmo PD do motor das aulas anteriores, embaixo do S0. O comando só conta como executado se a mão chegou ao alvo e o robô continua de pé."
+          "detalhe": "O mesmo PD do motor das aulas anteriores, embaixo do S0. O comando só conta como executado se a mêo chegou ao alvo e o robô continua de pé."
         }
       ],
       "estilo": "escada",
-      "legenda": "O VLA propõe; o controle de corpo inteiro confere e executa. A segurança não pode depender só do modelo de cima."
+      "legenda": "O VLA propõe; o controle de corpo inteiro confere e executa. A segurança nêo pode depender só do modelo de cima."
     },
     {
       "tipo": "passos",
@@ -119,7 +119,7 @@
           "titulo": "NVIDIA",
           "sub": "N1.7 + SONIC",
           "texto": [
-            "Em 07/05/2026 o repositório GR00T-WholeBodyControl publicou o fluxo VLA ponta a ponta no G1: coletar dados por teleoperação, ajustar o GR00T N1.7 e implantar com o SONIC como controle de corpo inteiro.",
+            "Em 07/05/2026 o repositório GR00T-WholeBodyControl publicou o fluxo VLA ponta a ponta no G1: coletar dados por teleoperaçêo, ajustar o GR00T N1.7 e implantar com o SONIC como controle de corpo inteiro.",
             "O SONIC v1.1 (23/07/2026) foi treinado com aumento de pose de punho justamente para teleop e para VLAs que usam esse controle."
           ]
         },
@@ -127,8 +127,8 @@
           "titulo": "Desacoplado",
           "sub": "N1.5/N1.6",
           "texto": [
-            "Antes do SONIC, o GR00T N1.5 e o N1.6 rodavam sobre o WBC desacoplado: RL nas pernas, IK nos braços. É a divisão que o kit imita.",
-            "Vantagem: simples e previsível. Limite: o tronco e as pernas não ajudam o braço a alcançar mais longe."
+            "Antes do SONIC, o GR00T N1.5 e o N1.6 rodavam sobre o WBC desacoplado: RL nas pernas, IK nos braços. É a divisêo que o kit imita.",
+            "Vantagem: simples e previsível. Limite: o tronco e as pernas nêo ajudam o braço a alcançar mais longe."
           ]
         }
       ]
@@ -136,7 +136,7 @@
     {
       "tipo": "codigo",
       "titulo": "Quatro comandos de alto nível",
-      "sub": "O arquivo de comandos faz o papel da saída de um VLA. O comando_wbc.py confere cada um, executa em 1 s (rampa + correção em malha fechada a 50 Hz) e diz se a mão chegou.",
+      "sub": "O arquivo de comandos faz o papel da saída de um VLA. O comando_wbc.py confere cada um, executa em 1 s (rampa + correçêo em malha fechada a 50 Hz) e diz se a mêo chegou.",
       "blocos": [
         {
           "rot": "Terminal · executar comandos",
@@ -146,7 +146,7 @@
         {
           "rot": "Arquivo · kit/comandos.json",
           "icone": "arquivo",
-          "conteudo": "{\n  \"descricao\": \"Saída de alto nível, como a de um VLA a poucos Hz: o QUÊ fazer. Alvos da mão em metros, relativos à pelve (x para a frente, y para a esquerda, z para cima).\",\n  \"comandos\": [\n    {\"acao\": \"alcancar\", \"mao\": \"direita\", \"alvo_m\": [0.30, -0.20, 0.15]},\n    {\"acao\": \"girar_tronco\", \"graus\": 20},\n    {\"acao\": \"alcancar\", \"mao\": \"esquerda\", \"alvo_m\": [0.30, 0.25, 0.20]},\n    {\"acao\": \"voltar\"}\n  ]\n}"
+          "conteudo": "{\n  \"descricao\": \"Saída de alto nível, como a de um VLA a poucos Hz: o QUÊ fazer. Alvos da mêo em metros, relativos à pelve (x para a frente, y para a esquerda, z para cima).\",\n  \"comandos\": [\n    {\"acao\": \"alcancar\", \"mao\": \"direita\", \"alvo_m\": [0.30, -0.20, 0.15]},\n    {\"acao\": \"girar_tronco\", \"graus\": 20},\n    {\"acao\": \"alcancar\", \"mao\": \"esquerda\", \"alvo_m\": [0.30, 0.25, 0.20]},\n    {\"acao\": \"voltar\"}\n  ]\n}"
         }
       ],
       "saida": {
@@ -154,11 +154,11 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>comando 1 · alcancar direita (0.3, -0.2, 0.15) → executado: sim (mão a 1.1 cm do alvo)\ncomando 2 · girar_tronco 20° → executado: sim\ncomando 3 · alcancar esquerda (0.3, 0.25, 0.2) → executado: sim (mão a 1.0 cm do alvo)\ncomando 4 · voltar → executado: sim\nrobô de pé: sim · pelve a 0.79 m\nexecutado: sim\nsaída: 0</pre><p>Quatro comandos, quatro execuções, mão a cerca de 1 cm de cada alvo e o robô de pé no fim.</p>"
+            "html": "<pre>comando 1 · alcancar direita (0.3, -0.2, 0.15) → executado: sim (mêo a 1.1 cm do alvo)\ncomando 2 · girar_tronco 20° → executado: sim\ncomando 3 · alcancar esquerda (0.3, 0.25, 0.2) → executado: sim (mêo a 1.0 cm do alvo)\ncomando 4 · voltar → executado: sim\nrobô de pé: sim · pelve a 0.79 m\nexecutado: sim\nsaída: 0</pre><p>Quatro comandos, quatro execuções, mêo a cerca de 1 cm de cada alvo e o robô de pé no fim.</p>"
           },
           {
             "rot": "Erro comum: comando impossível",
-            "html": "<pre>comando 1 · alcancar direita (0.9, -0.2, 0.15) → recusado: alvo a 0.92 m do ombro; o braço alcança 0.38 m\ncomando 2 · girar_tronco 200° → recusado: fora do limite da cintura (-150° a 150°)\ncomando 3 · pular → recusado: ação desconhecida (conheço alcancar, girar_tronco, voltar)\nrobô de pé: sim · pelve a 0.79 m\nexecutado: não · 3 comando(s) recusado(s)\nsaída: 1</pre><p>Alvo a 92 cm do ombro (o braço alcança 38 cm até o punho), cintura a 200° (o limite é 150°) e uma ação que não existe: os três são recusados antes de qualquer movimento, e o robô continua parado e de pé.</p>"
+            "html": "<pre>comando 1 · alcancar direita (0.9, -0.2, 0.15) → recusado: alvo a 0.92 m do ombro; o braço alcança 0.38 m\ncomando 2 · girar_tronco 200° → recusado: fora do limite da cintura (-150° a 150°)\ncomando 3 · pular → recusado: açêo desconhecida (conheço alcancar, girar_tronco, voltar)\nrobô de pé: sim · pelve a 0.79 m\nexecutado: nêo · 3 comando(s) recusado(s)\nsaída: 1</pre><p>Alvo a 92 cm do ombro (o braço alcança 38 cm até o punho), cintura a 200° (o limite é 150°) e uma açêo que nêo existe: os três sêo recusados antes de qualquer movimento, e o robô continua parado e de pé.</p>"
           }
         ]
       }
@@ -180,13 +180,13 @@
           "titulo": "E2 · Comandos ruins",
           "min": "5 min",
           "texto": "Rode o arquivo de comandos ruins e leia o motivo de cada recusa.",
-          "pronto": "<code>python3 kit/comando_wbc.py --comandos kit/comandos-ruins.json | tail -1</code> → <code>executado: não · 3 comando(s) recusado(s)</code>."
+          "pronto": "<code>python3 kit/comando_wbc.py --comandos kit/comandos-ruins.json | tail -1</code> → <code>executado: nêo · 3 comando(s) recusado(s)</code>."
         },
         {
           "id": "e3",
           "titulo": "E3 · A sua sequência",
           "min": "10 min",
-          "texto": "Escreva ~/fth/movimentos/meus-comandos.json com cinco comandos (as duas mãos, um giro de tronco e voltar) e rode. Se algum for recusado, o motivo diz a distância até o ombro: o braço alcança 0,38 m até o punho.",
+          "texto": "Escreva ~/fth/movimentos/meus-comandos.json com cinco comandos (as duas mêos, um giro de tronco e voltar) e rode. Se algum for recusado, o motivo diz a distância até o ombro: o braço alcança 0,38 m até o punho.",
           "pronto": "<code>python3 kit/comando_wbc.py --comandos ~/fth/movimentos/meus-comandos.json | tail -1</code> → <code>executado: sim</code>."
         }
       ]
@@ -194,7 +194,7 @@
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da sua resposta.",
+      "sub": "A explicaçêo aparece depois da sua resposta.",
       "perguntas": [
         {
           "p": "O VLA manda alcançar um ponto a 92 cm do ombro. O que a camada de baixo deve fazer?",
@@ -226,7 +226,7 @@
           "opcoes": [
             "Isaac Lab 2.1.0 e BeyondMimic para treinar o VLA.",
             "Teleop para coletar dados, ajuste do N1.7 e o SONIC como controle.",
-            "GMR e LAFAN1 para gerar o VLA a partir de animação.",
+            "GMR e LAFAN1 para gerar o VLA a partir de animaçêo.",
             "Um VLA que dispensa o controle de corpo inteiro no G1 e manda direto nas juntas."
           ],
           "certa": 1,
@@ -249,7 +249,7 @@
         },
         {
           "t": "Conferir",
-          "texto": "A camada de baixo recusa o que não dá para fazer, antes de mexer."
+          "texto": "A camada de baixo recusa o que nêo dá para fazer, antes de mexer."
         }
       ]
     },
@@ -263,7 +263,7 @@
           "icone": "cerebro"
         },
         {
-          "t": "VLA v7.2, aula 7: a fronteira (RL depois da imitação)",
+          "t": "VLA v7.2, aula 7: a fronteira (RL depois da imitaçêo)",
           "href": "https://linnoff88-dev.github.io/
           "icone": "cerebro"
         },

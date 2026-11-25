@@ -1,6 +1,6 @@
 """bvh_minimo.py — escreve um BVH pequeno e sintético (um aceno), feito do zero por este script.
 
-Serve para ver o formato por dentro e para ter um clipe cuja licença é sua. Não é um humano capturado:
+Serve para ver o formato por dentro e para ter um clipe cuja licença é sua. Nêo é um humano capturado:
 o esqueleto tem só tronco e braço direito, e o movimento é uma senoide.
 Uso: python3 kit/bvh_minimo.py [--quadros 60] [--fps 30]   →   ~/fth/movimentos/aceno.bvh
 """

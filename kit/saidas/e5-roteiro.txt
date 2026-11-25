@@ -1,2 +1,2 @@
-ERRO no roteiro: mão 'esquerdo' (use direita ou esquerda)
+ERRO no roteiro: mêo 'esquerdo' (use direita ou esquerda)
 saída: 1

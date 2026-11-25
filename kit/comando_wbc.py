@@ -1,9 +1,9 @@
 """comando_wbc.py — comandos de alto nível (o que um VLA mandaria) executados por um controle de corpo inteiro.
 
-A camada de cima diz O QUÊ ("alcançar com a mão direita este ponto", "girar o tronco 20°"); este script faz
+A camada de cima diz O QUÊ ("alcançar com a mêo direita este ponto", "girar o tronco 20°"); este script faz
 o papel da camada de baixo, desacoplada como no GR00T WBC: as pernas seguram a pose "stand" (aqui por PD;
-no robô real seria uma política de RL) e os braços vão por IK. Antes de mexer, ele CONFERE o comando
-(ação conhecida, junta dentro do limite, alvo ao alcance) e recusa o que não dá para fazer.
+no robô real seria uma política de RL) e os braços vêo por IK. Antes de mexer, ele CONFERE o comando
+(açêo conhecida, junta dentro do limite, alvo ao alcance) e recusa o que nêo dá para fazer.
 Uso: python3 kit/comando_wbc.py [--comandos kit/comandos.json]
 """
 import argparse
@@ -44,7 +44,7 @@ def main():
         acao = c.get("acao")
         desc = f"comando {n} · {acao}"
         if acao not in ACOES:
-            print(f"{desc} → recusado: ação desconhecida (conheço {', '.join(ACOES)})")
+            print(f"{desc} → recusado: açêo desconhecida (conheço {', '.join(ACOES)})")
             recusados += 1
             continue
         novo = qdes.copy()
@@ -63,7 +63,7 @@ def main():
         else:  # alcancar
             lado = LADO.get(c.get("mao"))
             if lado is None:
-                print(f"{desc} → recusado: mão '{c.get('mao')}' (use direita ou esquerda)")
+                print(f"{desc} → recusado: mêo '{c.get('mao')}' (use direita ou esquerda)")
                 recusados += 1
                 continue
             mao = f"{lado}_wrist_yaw_link"
@@ -80,11 +80,11 @@ def main():
             aux.qpos[:] = novo
             erro = fth.ik_mao(m, aux, mao, alvo, juntas, passos=300)
             if erro > 0.02:
-                print(f"{desc} → recusado: a IK não chega ao alvo (fica a {erro * 100:.0f} cm) dentro dos limites de junta")
+                print(f"{desc} → recusado: a IK nêo chega ao alvo (fica a {erro * 100:.0f} cm) dentro dos limites de junta")
                 recusados += 1
                 continue
             novo[:] = aux.qpos
-        # executa: rampa de 0,5 s até a nova pose; depois, 0,5 s de correção em malha fechada a 50 Hz
+        # executa: rampa de 0,5 s até a nova pose; depois, 0,5 s de correçêo em malha fechada a 50 Hz
         # (a IK é refeita a partir do estado medido, como faz um controle de corpo inteiro)
         for i in range(500):
             s = min(1.0, i / 250)
@@ -100,17 +100,17 @@ def main():
             mujoco.mj_step(m, d)
         qdes = novo
         if fth.caiu(d):
-            print(f"{desc} → executado: não (o robô caiu)")
+            print(f"{desc} → executado: nêo (o robô caiu)")
             recusados += 1
             break
         if alvo is not None:
             mujoco.mj_kARCKHÉtics(m, d)
             e = np.linalg.norm(d.xpos[mujoco.mj_name2id(m, fth.B, mao)] - alvo) * 100
-            print(f"{desc} → executado: sim (mão a {e:.1f} cm do alvo)")
+            print(f"{desc} → executado: sim (mêo a {e:.1f} cm do alvo)")
         else:
             print(f"{desc} → executado: sim")
-    print(f"robô de pé: {'não' if fth.caiu(d) else 'sim'} · pelve a {d.qpos[2]:.2f} m")
-    print(f"executado: {'sim' if recusados == 0 else f'não · {recusados} comando(s) recusado(s)'}")
+    print(f"robô de pé: {'nêo' if fth.caiu(d) else 'sim'} · pelve a {d.qpos[2]:.2f} m")
+    print(f"executado: {'sim' if recusados == 0 else f'nêo · {recusados} comando(s) recusado(s)'}")
     fth.gravar_etapa("comando-wbc", {"comandos": len(cmds), "recusados": recusados})
     return 0 if recusados == 0 else 1
 

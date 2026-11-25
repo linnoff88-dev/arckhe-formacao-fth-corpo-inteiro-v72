@@ -1,6 +1,6 @@
 """fth.py — funções comuns do kit do curso FTH 3 (Corpo inteiro: imitar, teleoperar e obedecer).
 
-Mesma bancada do curso 0: acha o MuJoCo Menagerie em $FTH/mujoco_menagerie (padrão: a pasta acima do
+Mesma bancada do curso 0: acha o MuJoCo Menagerie em $FTH/mujoco_menagerie (padrêo: a pasta acima do
 repositório do curso, ou seja ~/fth) e grava o que cada etapa produz em $FTH/movimentos/.
 Testado com mujoco 3.16.0 + numpy 2.5.4, Menagerie 62ab00f (15/10/2026), em 19/10/2026.
 """
@@ -29,7 +29,7 @@ def caminho(p):
     r = MENAGERIE / p
     if r.exists():
         return r
-    sys.exit(f"ERRO: não achei {p} (nem em {MENAGERIE}). Monte a bancada da aula 1.")
+    sys.exit(f"ERRO: nêo achei {p} (nem em {MENAGERIE}). Monte a bancada da aula 1.")
 
 
 def carregar(p=G1):
@@ -70,7 +70,7 @@ def gravar_etapa(nome_etapa, dados):
 
 
 def ik_mao(m, d, corpo, alvo, juntas, passos=200, amort=0.05, tol=0.01):
-    """IK de posição por mínimos quadrados amortecidos (Jacobiano do MuJoCo) só nas juntas dadas.
+    """IK de posiçêo por mínimos quadrados amortecidos (Jacobiano do MuJoCo) só nas juntas dadas.
     Mexe em d.qpos dessas juntas (respeitando jnt_range) e devolve o erro final em metros."""
     bid = mujoco.mj_name2id(m, B, corpo)
     cols = [int(m.jnt_dofadr[j]) for j in juntas]
@@ -98,7 +98,7 @@ def juntas_por_prefixo(m, prefixo):
 
 
 def ctrl_da_pose(m, d):
-    """Para atuadores de posição (o G1 do Menagerie): ctrl = qpos da junta de cada motor."""
+    """Para atuadores de posiçêo (o G1 do Menagerie): ctrl = qpos da junta de cada motor."""
     for a in range(m.nu):
         j = m.actuator_trnid[a][0]
         d.ctrl[a] = d.qpos[m.jnt_qposadr[j]]

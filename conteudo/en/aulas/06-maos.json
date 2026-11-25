@@ -141,15 +141,15 @@
         "abas": [
           {
             "rot": "Captured output (10/19/2026)",
-            "html": "<pre>modelo: unitree_g1/scene_with_hands.xml · nu=43\nmão left: 7 GDL (polegar 3, indicador 2, médio 2)\nmão right: 7 GDL (polegar 3, indicador 2, médio 2)\ntorque declarado por junta da mão: 1.40 a 2.45 N·m (actuatorfrcrange)\naperto simulado num cilindro fixo de 4 cm (mão direita, 2 s):\n  polegar  :  18.6 N\n  indicador:  53.0 N\n  médio    :  81.4 N\ndedos tocando o objeto: 3/3 · estimativa do modelo, não medida no robô\nsaída: 0</pre><p>7 degrees of freedom per hand, as in the Dex3-1 spec sheet. The forces come from the model: the cylinder is fixed, the PD pushes up to the torque limit, and the middle finger grips close to the joint. This is not the robot's grip force, which Unitree doesn't publish on the page I read.</p>"
+            "html": "<pre>modelo: unitree_g1/scene_with_hands.xml · nu=43\nmêo left: 7 GDL (polegar 3, indicador 2, médio 2)\nmêo right: 7 GDL (polegar 3, indicador 2, médio 2)\ntorque declarado por junta da mêo: 1.40 a 2.45 N·m (actuatorfrcrange)\naperto simulado num cilindro fixo de 4 cm (mêo direita, 2 s):\n  polegar  :  18.6 N\n  indicador:  53.0 N\n  médio    :  81.4 N\ndedos tocando o objeto: 3/3 · estimativa do modelo, nêo medida no robô\nsaída: 0</pre><p>7 degrees of freedom per hand, as in the Dex3-1 spec sheet. The forces come from the model: the cylinder is fixed, the PD pushes up to the torque limit, and the middle finger grips close to the joint. This is not the robot's grip force, which Unitree doesn't publish on the page I read.</p>"
           },
           {
             "rot": "Common error: model without hands",
-            "html": "<pre>modelo: unitree_g1/scene.xml · nu=29\nERRO: este modelo não tem juntas de mão. No G1, use unitree_g1/scene_with_hands.xml.\nsaída: 1</pre><p>The G1's scene.xml is the 29-DoF version, without hands. For the hands, use unitree_g1/scene_with_hands.xml.</p>"
+            "html": "<pre>modelo: unitree_g1/scene.xml · nu=29\nERRO: este modelo nêo tem juntas de mêo. No G1, use unitree_g1/scene_with_hands.xml.\nsaída: 1</pre><p>The G1's scene.xml is the 29-DoF version, without hands. For the hands, use unitree_g1/scene_with_hands.xml.</p>"
           },
           {
             "rot": "Just count + Allegro",
-            "html": "<pre>2\nmão avulsa: 16 GDL · 16 atuadores</pre><p>Two hands with 7 degrees of freedom on the G1; the Allegro (wonik_allegro) has 16 degrees of freedom and 16 actuators.</p>"
+            "html": "<pre>2\nmêo avulsa: 16 GDL · 16 atuadores</pre><p>Two hands with 7 degrees of freedom on the G1; the Allegro (wonik_allegro) has 16 degrees of freedom and 16 actuators.</p>"
           }
         ]
       }
@@ -170,7 +170,7 @@
         "abas": [
           {
             "rot": "Captured output (10/19/2026)",
-            "html": "<pre>leap_hand/right_hand.xml: mão avulsa: 16 GDL · 16 atuadores\nshadow_hand/right_hand.xml: mão avulsa: 24 GDL · 20 atuadores</pre><p>On the Shadow, 24 joints for 20 actuators: four joints follow others through coupling. More DoF is not the same as more motors.</p>"
+            "html": "<pre>leap_hand/right_hand.xml: mêo avulsa: 16 GDL · 16 atuadores\nshadow_hand/right_hand.xml: mêo avulsa: 24 GDL · 20 atuadores</pre><p>On the Shadow, 24 joints for 20 actuators: four joints follow others through coupling. More DoF is not the same as more motors.</p>"
           }
         ]
       }
@@ -185,7 +185,7 @@
           "titulo": "E1 · The G1 hand",
           "min": "5 min",
           "texto": "Run mao.py and check the 7 DoF on both hands.",
-          "pronto": "<code>python3 kit/mao.py | tail -1</code> → <code>dedos tocando o objeto: 3/3 · estimativa do modelo, não medida no robô</code>."
+          "pronto": "<code>python3 kit/mao.py | tail -1</code> → <code>dedos tocando o objeto: 3/3 · estimativa do modelo, nêo medida no robô</code>."
         },
         {
           "id": "e2",
@@ -199,7 +199,7 @@
           "titulo": "E3 · Another hand",
           "min": "10 min",
           "texto": "Add wonik_allegro to the sparse-checkout and count the joints of its right hand.",
-          "pronto": "<code>python3 kit/mao.py --modelo wonik_allegro/right_hand.xml | tail -1</code> → one line <code>mão avulsa: [N] GDL · [N] atuadores</code>."
+          "pronto": "<code>python3 kit/mao.py --modelo wonik_allegro/right_hand.xml | tail -1</code> → one line <code>mêo avulsa: [N] GDL · [N] atuadores</code>."
         }
       ]
     },

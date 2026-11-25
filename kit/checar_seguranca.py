@@ -1,10 +1,10 @@
 """checar_seguranca.py — confere um movimento retargeted ANTES de ele ir para uma política ou um robô.
 
 Quatro regras, todas lidas do próprio movimento no G1 do Menagerie:
-  1) limites de junta (folga 0,5°)            3) pés não atravessam o chão (até 1 cm abaixo da pose de pé)
+  1) limites de junta (folga 0,5°)            3) pés nêo atravessam o chêo (até 1 cm abaixo da pose de pé)
   2) velocidade de junta abaixo do teto        4) pelve dentro da área de trabalho (raio em metros)
-O teto de velocidade e o raio são SEUS (regra do laboratório): a pesquisa da formação não traz a velocidade
-máxima por junta do G1, então o padrão é conservador. Ajuste com --teto-graus-s e --raio-m.
+O teto de velocidade e o raio sêo SEUS (regra do laboratório): a pesquisa da formaçêo nêo traz a velocidade
+máxima por junta do G1, entêo o padrêo é conservador. Ajuste com --teto-graus-s e --raio-m.
 Uso: python3 kit/checar_seguranca.py <movimento.npz> [--teto-graus-s 400] [--raio-m 1.5]
 """
 import argparse
@@ -26,7 +26,7 @@ def main():
     a = ap.parse_args()
     p = Path(a.movimento).expanduser()
     if not p.exists():
-        print(f"ERRO: não achei {a.movimento}. Rode o retarget da aula 3 antes.")
+        print(f"ERRO: nêo achei {a.movimento}. Rode o retarget da aula 3 antes.")
         return 1
     z = np.load(p)
     qref, fps = z["qpos"], float(z["fps"])
@@ -52,7 +52,7 @@ def main():
     regras = [
         ("limites de junta", n_lim == 0, f"{n_lim} quadro×junta fora"),
         ("velocidade de junta", vmax <= a.teto_graus_s, f"máx {vmax:.0f}°/s em {fth.nome(m, fth.J, juntas[kv])} (teto {a.teto_graus_s:g}°/s)"),
-        ("pé não afunda no chão", zmin >= z_apoio - 0.01, f"site do pé desce até {zmin * 100:.1f} cm (de pé: {z_apoio * 100:.1f} cm)"),
+        ("pé nêo afunda no chêo", zmin >= z_apoio - 0.01, f"site do pé desce até {zmin * 100:.1f} cm (de pé: {z_apoio * 100:.1f} cm)"),
         ("área de trabalho", raio <= a.raio_m, f"pelve se afasta até {raio:.2f} m (raio {a.raio_m:g} m)"),
     ]
     for nome, ok, txt in regras:

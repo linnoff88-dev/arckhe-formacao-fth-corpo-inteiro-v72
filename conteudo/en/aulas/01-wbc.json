@@ -167,7 +167,7 @@
         "abas": [
           {
             "rot": "Captured output (10/19/2026)",
-            "html": "<pre>simulado: 2 s · passo de física 2 ms\ntarefa (VLA: S2+S1)      :   10 chamadas (5 Hz)\nS0 corpo inteiro (IK)    :  100 chamadas (50 Hz)\nPD do motor + física     : 1000 passos   (500 Hz)\nmão direita a 0.7 cm do último alvo · pelve a 0.79 m · de pé: sim\n3 camadas\nsaída: 0</pre><p>1000 PD steps for 100 S0 decisions and 10 task decisions. The hand ends less than 1 cm from the last target and the robot is still standing.</p>"
+            "html": "<pre>simulado: 2 s · passo de física 2 ms\ntarefa (VLA: S2+S1)      :   10 chamadas (5 Hz)\nS0 corpo inteiro (IK)    :  100 chamadas (50 Hz)\nPD do motor + física     : 1000 passos   (500 Hz)\nmêo direita a 0.7 cm do último alvo · pelve a 0.79 m · de pé: sim\n3 camadas\nsaída: 0</pre><p>1000 PD steps for 100 S0 decisions and 10 task decisions. The hand ends less than 1 cm from the last target and the robot is still standing.</p>"
           },
           {
             "rot": "Common error: a frequency that doesn't divide evenly",

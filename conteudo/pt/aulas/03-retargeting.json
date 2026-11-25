@@ -5,7 +5,7 @@
   "titulo": "Retargeting: do esqueleto humano ao robô",
   "titulo_curto": "Retargeting com o GMR",
   "minutos": 15,
-  "lead": "Uma pessoa tem 1,70 m e juntas que o robô não tem; o G1 tem 1,32 m e, no modelo do Menagerie, 29 juntas com limites. Retargeting é a conta que leva um ao outro, quadro a quadro. Nesta aula você instala o GMR num ambiente próprio, leva 10 s de boxe para o G1 e confere cada quadro nos limites das juntas.",
+  "lead": "Uma pessoa tem 1,70 m e juntas que o robô nêo tem; o G1 tem 1,32 m e, no modelo do Menagerie, 29 juntas com limites. Retargeting é a conta que leva um ao outro, quadro a quadro. Nesta aula você instala o GMR num ambiente próprio, leva 10 s de boxe para o G1 e confere cada quadro nos limites das juntas.",
   "objetivo": "levar um clipe humano para o G1 com o GMR num ambiente próprio e conferir que nenhum quadro passa do limite das juntas.",
   "competencias": [
     "fazer-retargeting",
@@ -44,10 +44,10 @@
           "itens": [
             {
               "icone": "lista",
-              "t": "quadril, joelhos, mãos…"
+              "t": "quadril, joelhos, mêos…"
             }
           ],
-          "detalhe": "Do BVH saem posição e orientação de cada parte do corpo no quadro (quadril, coxas, pés, braços, mãos), já no referencial do mundo."
+          "detalhe": "Do BVH saem posiçêo e orientaçêo de cada parte do corpo no quadro (quadril, coxas, pés, braços, mêos), já no referencial do mundo."
         },
         {
           "icone": "grafico",
@@ -59,7 +59,7 @@
               "t": "0,9 nas pernas, 0,75 nos braços"
             }
           ],
-          "detalhe": "O humano é maior que o G1. A configuração do GMR para o G1 encolhe cada parte por um fator (nas pernas 0,9, nos braços 0,75, no arquivo bvh_xsens_to_g1.json) e usa a altura real do clipe."
+          "detalhe": "O humano é maior que o G1. A configuraçêo do GMR para o G1 encolhe cada parte por um fator (nas pernas 0,9, nos braços 0,75, no arquivo bvh_xsens_to_g1.json) e usa a altura real do clipe."
         },
         {
           "icone": "chip",
@@ -72,7 +72,7 @@
               "t": "duas tabelas de correspondência"
             }
           ],
-          "detalhe": "Cada corpo do robô (pelve, coxa, mão…) recebe como alvo o ponto humano correspondente, com pesos de posição e de orientação. O mink resolve a cinemática inversa com o solver daqp, respeitando os limites de junta do modelo do GMR."
+          "detalhe": "Cada corpo do robô (pelve, coxa, mêo…) recebe como alvo o ponto humano correspondente, com pesos de posiçêo e de orientaçêo. O mink resolve a cinemática inversa com o solver daqp, respeitando os limites de junta do modelo do GMR."
         },
         {
           "icone": "robo",
@@ -84,7 +84,7 @@
               "t": "base 7 + 29 juntas"
             }
           ],
-          "detalhe": "A saída de cada quadro é a pose inteira do robô: posição e quatérnio da base (7) e os 29 ângulos, na mesma ordem do G1 do Menagerie. O kit guarda o quatérnio como o MuJoCo usa (w, x, y, z)."
+          "detalhe": "A saída de cada quadro é a pose inteira do robô: posiçêo e quatérnio da base (7) e os 29 ângulos, na mesma ordem do G1 do Menagerie. O kit guarda o quatérnio como o MuJoCo usa (w, x, y, z)."
         },
         {
           "icone": "escudo",
@@ -93,10 +93,10 @@
           "itens": [
             {
               "icone": "x",
-              "t": "violação = quadro × junta fora"
+              "t": "violaçêo = quadro × junta fora"
             }
           ],
-          "detalhe": "Conferir no modelo que vai seguir o movimento (aqui, o G1 do Menagerie). O IK respeita limites com tolerância numérica; o kit só conta como violação o que passa de 0,5°."
+          "detalhe": "Conferir no modelo que vai seguir o movimento (aqui, o G1 do Menagerie). O IK respeita limites com tolerância numérica; o kit só conta como violaçêo o que passa de 0,5°."
         }
       ],
       "estilo": "escada",
@@ -112,18 +112,18 @@
           "sub": "no import",
           "texto": [
             "O pacote do GMR importa o PyTorch logo ao ser carregado (o modelo cinemático usa tensores), mesmo para retargeting de BVH. Pôr torch no .venv das práticas de MuJoCo deixaria o ambiente pesado à toa.",
-            "Solução: um .venv-gmr só para ele, com o torch de CPU do índice oficial do PyTorch."
+            "Soluçêo: um .venv-gmr só para ele, com o torch de CPU do índice oficial do PyTorch."
           ]
         },
         {
           "titulo": "setup.py",
           "sub": "× código",
           "texto": [
-            "No commit bb1bbe4 (02/04/2026), o setup.py pede, entre outros, proxqp, smplx e redis, mas o retargeting de BVH usa o solver daqp (padrão no código) e não precisa dos outros.",
-            "Quando código e lista de dependências divergem, vale o código: o curso instala o GMR com --no-deps e fixa à mão só o que roda."
+            "No commit bb1bbe4 (02/04/2026), o setup.py pede, entre outros, proxqp, smplx e redis, mas o retargeting de BVH usa o solver daqp (padrêo no código) e nêo precisa dos outros.",
+            "Quando código e lista de dependências divergem, vale o código: o curso instala o GMR com --no-deps e fixa à mêo só o que roda."
           ],
           "exemplo": {
-            "rot": "Regra da formação",
+            "rot": "Regra da formaçêo",
             "texto": "Um ambiente por ferramenta e versões fixadas por projeto. O BeyondMimic fixa o Isaac Lab 2.1.0; o mjlab usa o MuJoCo Warp com uv; num ambiente só, um quebra o outro."
           }
         },
@@ -132,7 +132,7 @@
           "sub": "de qual arquivo?",
           "texto": [
             "O modelo do G1 que o GMR usa (g1_mocap_29dof.xml) tem a mesma ordem de juntas do Menagerie, mas limites mais apertados em 15 das 29 juntas (medido em 19/10/2026).",
-            "Como o retargeting respeita os limites do GMR, o resultado cabe nos do Menagerie. O contrário não valeria: confira sempre no modelo que vai executar."
+            "Como o retargeting respeita os limites do GMR, o resultado cabe nos do Menagerie. O contrário nêo valeria: confira sempre no modelo que vai executar."
           ]
         }
       ]
@@ -179,11 +179,11 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>clipe: 251021_04_boxing_120Hz_cm_3DsMax.bvh · 1200 quadros a 120 Hz (10.0 s) · 28 pontos do esqueleto\naltura do humano no clipe: 1.67 m · robô: unitree_g1 (GMR, config bvh_xsens_to_g1.json)\nqpos: 1200 × 36 (base 7 + 29 juntas, mesma ordem do Menagerie)\nmenor margem até o limite: right_ankle_roll_joint (0.0°, 0 = encostado)\nviolações de limite (Menagerie, folga 0.5°): 0\ntempo de retargeting: menos de 1 min em CPU\ngravado: ~/fth/movimentos/boxe_g1.npz\nsaída: 0</pre><p>1200 quadros, nenhuma violação. A menor margem é o tornozelo encostado no limite: um pé plano no chão leva o tornozelo ao fim do curso.</p>"
+            "html": "<pre>clipe: 251021_04_boxing_120Hz_cm_3DsMax.bvh · 1200 quadros a 120 Hz (10.0 s) · 28 pontos do esqueleto\naltura do humano no clipe: 1.67 m · robô: unitree_g1 (GMR, config bvh_xsens_to_g1.json)\nqpos: 1200 × 36 (base 7 + 29 juntas, mesma ordem do Menagerie)\nmenor margem até o limite: right_ankle_roll_joint (0.0°, 0 = encostado)\nviolações de limite (Menagerie, folga 0.5°): 0\ntempo de retargeting: menos de 1 min em CPU\ngravado: ~/fth/movimentos/boxe_g1.npz\nsaída: 0</pre><p>1200 quadros, nenhuma violaçêo. A menor margem é o tornozelo encostado no limite: um pé plano no chêo leva o tornozelo ao fim do curso.</p>"
           },
           {
             "rot": "Erro comum: ambiente errado",
-            "html": "<pre>ERRO: o GMR não está neste ambiente (No module named 'general_motion_retargeting'). Ative ~/fth/.venv-gmr (aula 3).\nsaída: 2</pre><p>Rodou com o .venv do MuJoCo ativo. O GMR só existe no .venv-gmr: ative-o (<code>. ~/fth/.venv-gmr/bin/activate</code>) e rode de novo.</p>"
+            "html": "<pre>ERRO: o GMR nêo está neste ambiente (No module named 'general_motion_retargeting'). Ative ~/fth/.venv-gmr (aula 3).\nsaída: 2</pre><p>Rodou com o .venv do MuJoCo ativo. O GMR só existe no .venv-gmr: ative-o (<code>. ~/fth/.venv-gmr/bin/activate</code>) e rode de novo.</p>"
           }
         ]
       }
@@ -197,12 +197,12 @@
           "id": "e1",
           "titulo": "E1 · Ambiente do GMR",
           "min": "10 min",
-          "texto": "Rode o bloco de instalação e confirme as versões.",
+          "texto": "Rode o bloco de instalaçêo e confirme as versões.",
           "pronto": "<code>~/fth/.venv-gmr/bin/python -c \"import general_motion_retargeting\" 2>/dev/null; echo \"saída: $?\"</code> → <code>saída: 0</code>."
         },
         {
           "id": "e2",
-          "titulo": "E2 · Retargeting sem violação",
+          "titulo": "E2 · Retargeting sem violaçêo",
           "min": "5 min",
           "texto": "Rode o retargeting dos 10 s de boxe.",
           "pronto": "<code>python3 kit/retarget.py ~/fth/GMR/assets/xsens_bvh_test/251021_04_boxing_120Hz_cm_3DsMax.bvh --fim 1200 --nome boxe_g1</code> → <code>violações de limite (Menagerie, folga 0.5°): 0</code> e <code>saída: 0</code>."
@@ -219,43 +219,43 @@
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da sua resposta.",
+      "sub": "A explicaçêo aparece depois da sua resposta.",
       "perguntas": [
         {
           "p": "Por que o curso instala o GMR com --no-deps?",
           "opcoes": [
-            "Porque o PyPI não tem nenhuma das dependências do GMR para máquinas aarch64.",
-            "Porque o GMR não tem dependências e o pip reclamaria do setup.py.",
+            "Porque o PyPI nêo tem nenhuma das dependências do GMR para máquinas aarch64.",
+            "Porque o GMR nêo tem dependências e o pip reclamaria do setup.py.",
             "Porque --no-deps deixa o retargeting mais rápido na CPU do aluno.",
-            "Porque o setup.py pede pacotes que o retargeting de BVH não usa."
+            "Porque o setup.py pede pacotes que o retargeting de BVH nêo usa."
           ],
           "certa": 3,
-          "explica": "O código usa o solver daqp; proxqp, smplx e redis ficam de fora. Fixar à mão só o que roda deixa o ambiente menor e reprodutível.",
+          "explica": "O código usa o solver daqp; proxqp, smplx e redis ficam de fora. Fixar à mêo só o que roda deixa o ambiente menor e reprodutível.",
           "ref": "passos",
           "cert": true
         },
         {
-          "p": "O retargeting deu 0 violações nos limites do Menagerie. Por que isso não é sorte?",
+          "p": "O retargeting deu 0 violações nos limites do Menagerie. Por que isso nêo é sorte?",
           "opcoes": [
-            "Porque o boxe é um movimento lento que não chega perto dos limites.",
+            "Porque o boxe é um movimento lento que nêo chega perto dos limites.",
             "Porque o modelo do GMR tem limites iguais ou mais apertados que os do Menagerie.",
             "Porque o kit corta sozinho, sem avisar, os ângulos que passam do limite antes de contar.",
-            "Porque o G1 do Menagerie não declara limites de junta em nenhuma junta."
+            "Porque o G1 do Menagerie nêo declara limites de junta em nenhuma junta."
           ],
           "certa": 1,
-          "explica": "Em 15 das 29 juntas o modelo do GMR é mais restrito, e o IK respeita esses limites. Numa direção a garantia vale; na outra, não. O tornozelo encosta no limite, então o movimento não é \"longe dos limites\".",
+          "explica": "Em 15 das 29 juntas o modelo do GMR é mais restrito, e o IK respeita esses limites. Numa direçêo a garantia vale; na outra, nêo. O tornozelo encosta no limite, entêo o movimento nêo é \"longe dos limites\".",
           "ref": "passos"
         },
         {
-          "p": "O qpos de cada quadro tem 36 números. O que são os 7 primeiros?",
+          "p": "O qpos de cada quadro tem 36 números. O que sêo os 7 primeiros?",
           "opcoes": [
-            "Posição (x, y, z) e quatérnio da base, no formato w, x, y, z.",
+            "Posiçêo (x, y, z) e quatérnio da base, no formato w, x, y, z.",
             "Os ângulos das sete juntas da perna esquerda do robô.",
             "Velocidades da base, que o MuJoCo guarda junto das posições.",
             "A altura do humano, o fps e outros metadados do clipe."
           ],
           "certa": 0,
-          "explica": "A base flutuante tem 3 de posição + 4 do quatérnio; o kit mantém w, x, y, z como o MuJoCo usa (o script de exemplo do GMR grava x, y, z, w no pickle).",
+          "explica": "A base flutuante tem 3 de posiçêo + 4 do quatérnio; o kit mantém w, x, y, z como o MuJoCo usa (o script de exemplo do GMR grava x, y, z, w no pickle).",
           "ref": "diagrama"
         }
       ]
@@ -274,7 +274,7 @@
         },
         {
           "t": "Limites",
-          "texto": "Confira no modelo que vai executar, não no que gerou."
+          "texto": "Confira no modelo que vai executar, nêo no que gerou."
         }
       ]
     },

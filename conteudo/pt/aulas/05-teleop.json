@@ -2,11 +2,11 @@
   "slug": "teleop",
   "num": 5,
   "menu": "Teleop",
-  "titulo": "Teleoperação de corpo inteiro",
-  "titulo_curto": "Teleoperação de corpo inteiro",
+  "titulo": "Teleoperaçêo de corpo inteiro",
+  "titulo_curto": "Teleoperaçêo de corpo inteiro",
   "minutos": 15,
   "lead": "Teleoperar é o jeito mais rápido de um humanoide fazer uma tarefa nova e de juntar demonstrações para um VLA. O operador mexe os braços num óculos de VR e o robô repete; o atraso é o que estraga. Nesta aula você teleopera os dois braços do G1 por um roteiro e mede a partir de que latência tudo desanda.",
-  "objetivo": "teleoperar os dois braços do G1 por um roteiro de alvos com latência e medir quantos alvos a mão atinge.",
+  "objetivo": "teleoperar os dois braços do G1 por um roteiro de alvos com latência e medir quantos alvos a mêo atinge.",
   "competencias": [
     "simular-teleoperacao",
     "medir-efeito-da-latencia",
@@ -19,7 +19,7 @@
     },
     {
       "icone": "relogio",
-      "t": "Latência × horizonte de referência: não confundir os 80 ms do SONIC"
+      "t": "Latência × horizonte de referência: nêo confundir os 80 ms do SONIC"
     },
     {
       "icone": "alvo",
@@ -44,10 +44,10 @@
           "itens": [
             {
               "icone": "alvo",
-              "t": "pose das mãos e da cabeça"
+              "t": "pose das mêos e da cabeça"
             }
           ],
-          "detalhe": "O óculos de VR mede a pose da cabeça e das mãos do operador. O TWIST2 usou um PICO 4U e um pescoço de 2 GDL de cerca de US$ 250 no robô, e relatou 100 demonstrações em 15 min (relatado, arXiv nov/2025)."
+          "detalhe": "O óculos de VR mede a pose da cabeça e das mêos do operador. O TWIST2 usou um PICO 4U e um pescoço de 2 GDL de cerca de US$ 250 no robô, e relatou 100 demonstrações em 15 min (relatado, arXiv nov/2025)."
         },
         {
           "icone": "nuvem",
@@ -81,10 +81,10 @@
           "itens": [
             {
               "icone": "check",
-              "t": "mão a menos de 3 cm"
+              "t": "mêo a menos de 3 cm"
             }
           ],
-          "detalhe": "O PD do G1 leva cada junta ao ângulo pedido. O alvo conta como atingido quando a mão chega a menos de 3 cm dele dentro da janela de 0,6 s."
+          "detalhe": "O PD do G1 leva cada junta ao ângulo pedido. O alvo conta como atingido quando a mêo chega a menos de 3 cm dele dentro da janela de 0,6 s."
         }
       ],
       "volta": "o operador vê o robô",
@@ -97,10 +97,10 @@
       "passos": [
         {
           "titulo": "80 ms",
-          "sub": "não é latência",
+          "sub": "nêo é latência",
           "texto": [
-            "O SONIC tem um checkpoint de \"baixa latência\" (16/06/2026) que olha 4 quadros futuros a 20 ms: cerca de 80 ms de horizonte de referência. O checkpoint padrão olha 10 quadros (cerca de 200 ms).",
-            "O próprio README avisa: esses números não são a latência total da teleoperação, que inclui sensor, rede, pré-processamento e inferência."
+            "O SONIC tem um checkpoint de \"baixa latência\" (16/06/2026) que olha 4 quadros futuros a 20 ms: cerca de 80 ms de horizonte de referência. O checkpoint padrêo olha 10 quadros (cerca de 200 ms).",
+            "O próprio README avisa: esses números nêo sêo a latência total da teleoperaçêo, que inclui sensor, rede, pré-processamento e inferência."
           ]
         },
         {
@@ -124,7 +124,7 @@
     {
       "tipo": "codigo",
       "titulo": "Teleoperar os dois braços por um roteiro",
-      "sub": "O roteiro kit/passos.json faz o papel do operador: seis deslocamentos de controle, alternando as mãos. O sexto, de propósito, pede 60 cm à frente.",
+      "sub": "O roteiro kit/passos.json faz o papel do operador: seis deslocamentos de controle, alternando as mêos. O sexto, de propósito, pede 60 cm à frente.",
       "blocos": [
         {
           "rot": "Terminal · teleop com 80 ms",
@@ -134,7 +134,7 @@
         {
           "rot": "Arquivo · kit/passos.json",
           "icone": "arquivo",
-          "conteudo": "{\n  \"descricao\": \"Roteiro de teleoperação: deslocamentos do controle de cada mão (em metros, a partir da posição inicial da mão), como um operador de VR moveria. Cada alvo vale até 'janela' segundos depois de enviado.\",\n  \"tolerancia_cm\": 3,\n  \"alvos\": [\n    {\"t\": 0.2, \"mao\": \"direita\",  \"dx\": 0.20, \"dy\": 0.00, \"dz\": 0.15, \"janela\": 0.6},\n    {\"t\": 0.9, \"mao\": \"esquerda\", \"dx\": 0.20, \"dy\": 0.00, \"dz\": 0.15, \"janela\": 0.6},\n    {\"t\": 1.6, \"mao\": \"direita\",  \"dx\": 0.25, \"dy\": 0.10, \"dz\": 0.30, \"janela\": 0.6},\n    {\"t\": 2.3, \"mao\": \"esquerda\", \"dx\": 0.25, \"dy\": -0.10, \"dz\": 0.30, \"janela\": 0.6},\n    {\"t\": 3.0, \"mao\": \"direita\",  \"dx\": 0.15, \"dy\": -0.05, \"dz\": 0.05, \"janela\": 0.6},\n    {\"t\": 3.7, \"mao\": \"direita\",  \"dx\": 0.60, \"dy\": 0.00, \"dz\": 0.20, \"janela\": 0.6}\n  ]\n}"
+          "conteudo": "{\n  \"descricao\": \"Roteiro de teleoperaçêo: deslocamentos do controle de cada mêo (em metros, a partir da posiçêo inicial da mêo), como um operador de VR moveria. Cada alvo vale até 'janela' segundos depois de enviado.\",\n  \"tolerancia_cm\": 3,\n  \"alvos\": [\n    {\"t\": 0.2, \"mao\": \"direita\",  \"dx\": 0.20, \"dy\": 0.00, \"dz\": 0.15, \"janela\": 0.6},\n    {\"t\": 0.9, \"mao\": \"esquerda\", \"dx\": 0.20, \"dy\": 0.00, \"dz\": 0.15, \"janela\": 0.6},\n    {\"t\": 1.6, \"mao\": \"direita\",  \"dx\": 0.25, \"dy\": 0.10, \"dz\": 0.30, \"janela\": 0.6},\n    {\"t\": 2.3, \"mao\": \"esquerda\", \"dx\": 0.25, \"dy\": -0.10, \"dz\": 0.30, \"janela\": 0.6},\n    {\"t\": 3.0, \"mao\": \"direita\",  \"dx\": 0.15, \"dy\": -0.05, \"dz\": 0.05, \"janela\": 0.6},\n    {\"t\": 3.7, \"mao\": \"direita\",  \"dx\": 0.60, \"dy\": 0.00, \"dz\": 0.20, \"janela\": 0.6}\n  ]\n}"
         }
       ],
       "saida": {
@@ -142,11 +142,11 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>latência do operador ao robô: 80 ms · tolerância: 3 cm · controle a 50 Hz\nalvo 1 · t=0.2 s · mão direita  · atingido em 162 ms\nalvo 2 · t=0.9 s · mão esquerda · atingido em 160 ms\nalvo 3 · t=1.6 s · mão direita  · atingido em 174 ms\nalvo 4 · t=2.3 s · mão esquerda · atingido em 154 ms\nalvo 5 · t=3.0 s · mão direita  · atingido em 166 ms\nalvo 6 · t=3.7 s · mão direita  · não atingido (chegou a 21.7 cm)\nrobô de pé: sim\nalvos atingidos: 5/6\nsaída: 0</pre><p>Cada alvo leva cerca de 80 ms de latência + 80 ms de movimento. O 6º não é atingido com nenhuma latência: está fora do alcance do braço.</p>"
+            "html": "<pre>latência do operador ao robô: 80 ms · tolerância: 3 cm · controle a 50 Hz\nalvo 1 · t=0.2 s · mêo direita  · atingido em 162 ms\nalvo 2 · t=0.9 s · mêo esquerda · atingido em 160 ms\nalvo 3 · t=1.6 s · mêo direita  · atingido em 174 ms\nalvo 4 · t=2.3 s · mêo esquerda · atingido em 154 ms\nalvo 5 · t=3.0 s · mêo direita  · atingido em 166 ms\nalvo 6 · t=3.7 s · mêo direita  · nêo atingido (chegou a 21.7 cm)\nrobô de pé: sim\nalvos atingidos: 5/6\nsaída: 0</pre><p>Cada alvo leva cerca de 80 ms de latência + 80 ms de movimento. O 6º nêo é atingido com nenhuma latência: está fora do alcance do braço.</p>"
           },
           {
-            "rot": "Erro comum: nome da mão",
-            "html": "<pre>ERRO no roteiro: mão 'esquerdo' (use direita ou esquerda)\nsaída: 1</pre><p>O roteiro aceita só \"direita\" e \"esquerda\". Erro de digitação para antes de mexer no robô, não no meio da sessão.</p>"
+            "rot": "Erro comum: nome da mêo",
+            "html": "<pre>ERRO no roteiro: mêo 'esquerdo' (use direita ou esquerda)\nsaída: 1</pre><p>O roteiro aceita só \"direita\" e \"esquerda\". Erro de digitaçêo para antes de mexer no robô, nêo no meio da sessêo.</p>"
           },
           {
             "rot": "E2: alvo trazido para dentro",
@@ -183,7 +183,7 @@
       "exercicios": [
         {
           "id": "e1",
-          "titulo": "E1 · Roteiro padrão",
+          "titulo": "E1 · Roteiro padrêo",
           "min": "5 min",
           "texto": "Rode o teleop com o roteiro do kit e 80 ms.",
           "pronto": "<code>python3 kit/teleop_sim.py --roteiro kit/passos.json | tail -1</code> → <code>alvos atingidos: 5/6</code>."
@@ -207,40 +207,40 @@
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da sua resposta.",
+      "sub": "A explicaçêo aparece depois da sua resposta.",
       "perguntas": [
         {
-          "p": "O checkpoint de baixa latência do SONIC tem 4 quadros a 20 ms. O que são esses 80 ms?",
+          "p": "O checkpoint de baixa latência do SONIC tem 4 quadros a 20 ms. O que sêo esses 80 ms?",
           "opcoes": [
             "A latência total, do gesto do operador ao movimento do robô.",
-            "O tempo que o óculos de VR leva para medir a mão.",
+            "O tempo que o óculos de VR leva para medir a mêo.",
             "O horizonte de referência futura que o controlador observa.",
             "O período do laço PD das juntas do G1 nesse modo."
           ],
           "certa": 2,
-          "explica": "É quanto da referência futura a política vê. O README diz que não é a latência ponta a ponta, que soma sensor, rede, pré-processamento e inferência.",
+          "explica": "É quanto da referência futura a política vê. O README diz que nêo é a latência ponta a ponta, que soma sensor, rede, pré-processamento e inferência.",
           "ref": "passos",
           "cert": true
         },
         {
-          "p": "O alvo 6 não é atingido nem com latência zero. O que isso indica?",
+          "p": "O alvo 6 nêo é atingido nem com latência zero. O que isso indica?",
           "opcoes": [
             "Que o controle a 50 Hz é lento demais para esse alvo.",
-            "Que o alvo está fora do alcance do braço; latência não muda isso.",
-            "Que o roteiro está com o nome da mão errado nesse alvo.",
+            "Que o alvo está fora do alcance do braço; latência nêo muda isso.",
+            "Que o roteiro está com o nome da mêo errado nesse alvo.",
             "Que o robô caiu antes do alvo 6 e parou de responder."
           ],
           "certa": 1,
-          "explica": "60 cm à frente da mão passa do comprimento do braço do G1. A mão chega a 21,7 cm e para: a IK faz o melhor possível dentro dos limites.",
+          "explica": "60 cm à frente da mêo passa do comprimento do braço do G1. A mêo chega a 21,7 cm e para: a IK faz o melhor possível dentro dos limites.",
           "ref": "codigo"
         },
         {
-          "p": "Para que teleoperação de corpo inteiro serve além de operar o robô na hora?",
+          "p": "Para que teleoperaçêo de corpo inteiro serve além de operar o robô na hora?",
           "opcoes": [
             "Para coletar demonstrações e ajustar um VLA (GR00T N1.7 + SONIC).",
-            "Para medir a bateria do robô durante a sessão de uso.",
+            "Para medir a bateria do robô durante a sessêo de uso.",
             "Para calibrar a câmera de profundidade da cabeça do robô.",
-            "Para nada além disso: os dados de teleop não são reaproveitados para treino depois."
+            "Para nada além disso: os dados de teleop nêo sêo reaproveitados para treino depois."
           ],
           "certa": 0,
           "explica": "Teleop é a fonte de dados de tarefa: o TWIST2 relatou 100 demonstrações em 15 min, e o GR00T-WBC tem o fluxo coletar → ajustar N1.7 → implantar com SONIC.",
@@ -258,7 +258,7 @@
         },
         {
           "t": "Latência",
-          "texto": "Horizonte de referência não é latência ponta a ponta."
+          "texto": "Horizonte de referência nêo é latência ponta a ponta."
         },
         {
           "t": "Dados",
@@ -271,7 +271,7 @@
       "titulo": "Para ir além",
       "links": [
         {
-          "t": "GR00T-WholeBodyControl: teleop por VR e cartão do SONIC",
+          "t": "GR00T-WholeBodyControl: teleop por VR e cartêo do SONIC",
           "href": "https://github.com/NVlabs/GR00T-WholeBodyControl",
           "icone": "git"
         },

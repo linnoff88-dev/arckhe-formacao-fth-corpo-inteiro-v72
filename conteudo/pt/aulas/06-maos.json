@@ -1,12 +1,12 @@
 {
   "slug": "maos",
   "num": 6,
-  "menu": "Mãos",
-  "titulo": "Mãos: o problema que ainda não está resolvido",
-  "titulo_curto": "Mãos",
+  "menu": "Mêos",
+  "titulo": "Mêos: o problema que ainda nêo está resolvido",
+  "titulo_curto": "Mêos",
   "minutos": 15,
-  "lead": "O corpo inteiro anda, equilibra e imita; na hora de pegar, tudo depende de uma mão com poucos graus de liberdade e quase nenhum tato. Nesta aula você conta as juntas da mão do G1 no modelo, compara com duas mãos de pesquisa e mede um aperto simulado, sabendo o que esse número é e o que não é.",
-  "objetivo": "contar os graus de liberdade da mão do G1, comparar com outras mãos e medir um aperto simulado no modelo.",
+  "lead": "O corpo inteiro anda, equilibra e imita; na hora de pegar, tudo depende de uma mêo com poucos graus de liberdade e quase nenhum tato. Nesta aula você conta as juntas da mêo do G1 no modelo, compara com duas mêos de pesquisa e mede um aperto simulado, sabendo o que esse número é e o que nêo é.",
+  "objetivo": "contar os graus de liberdade da mêo do G1, comparar com outras mêos e medir um aperto simulado no modelo.",
   "competencias": [
     "ler-mao-no-mjcf",
     "comparar-maos-de-robo",
@@ -15,7 +15,7 @@
   "aprende": [
     {
       "icone": "lista",
-      "t": "A Dex3-1 do G1: 7 GDL por mão (polegar 3, indicador 2, médio 2)"
+      "t": "A Dex3-1 do G1: 7 GDL por mêo (polegar 3, indicador 2, médio 2)"
     },
     {
       "icone": "chip",
@@ -27,10 +27,10 @@
     },
     {
       "icone": "lupa",
-      "t": "Mãos de pesquisa (LEAP, Shadow) e as do mercado, com fonte"
+      "t": "Mêos de pesquisa (LEAP, Shadow) e as do mercado, com fonte"
     }
   ],
-  "hero_alt": "Mão robótica cinza escura de três dedos apertando um pequeno cilindro sobre a bancada, com cabos finos e luz lateral.",
+  "hero_alt": "Mêo robótica cinza escura de três dedos apertando um pequeno cilindro sobre a bancada, com cabos finos e luz lateral.",
   "secoes": [
     {
       "tipo": "diagrama",
@@ -40,14 +40,14 @@
         {
           "icone": "lista",
           "titulo": "GDL",
-          "sub": "7 por mão",
+          "sub": "7 por mêo",
           "itens": [
             {
               "icone": "check",
               "t": "polegar 3, indicador 2, médio 2"
             }
           ],
-          "detalhe": "A Dex3-1, mão do G1 EDU, tem 7 graus de liberdade (fato, página do G1 lida em 19/10/2026). O modelo scene_with_hands.xml do Menagerie traz exatamente essas 7 juntas por mão: o robô passa de 29 para 43 atuadores."
+          "detalhe": "A Dex3-1, mêo do G1 EDU, tem 7 graus de liberdade (fato, página do G1 lida em 19/10/2026). O modelo scene_with_hands.xml do Menagerie traz exatamente essas 7 juntas por mêo: o robô passa de 29 para 43 atuadores."
         },
         {
           "icone": "chip",
@@ -56,10 +56,10 @@
           "itens": [
             {
               "icone": "alvo",
-              "t": "posição, kp=500"
+              "t": "posiçêo, kp=500"
             }
           ],
-          "detalhe": "Cada junta da mão tem um atuador de posição com o torque limitado pelo actuatorfrcrange do MJCF: 2,45 N·m na base do polegar e 1,4 N·m nas outras. É esse teto que limita o aperto."
+          "detalhe": "Cada junta da mêo tem um atuador de posiçêo com o torque limitado pelo actuatorfrcrange do MJCF: 2,45 N·m na base do polegar e 1,4 N·m nas outras. É esse teto que limita o aperto."
         },
         {
           "icone": "alvo",
@@ -72,7 +72,7 @@
               "t": "N em cada falange"
             }
           ],
-          "detalhe": "Quando o dedo encosta, a força no objeto depende do torque e de onde o contato cai: perto da junta, o mesmo torque vira mais força. Por isso os três dedos dão números tão diferentes no kit."
+          "detalhe": "Quando o dedo encosta, a força no objeto depende do torque e de onde o contato cai: perto da junta, o mesmo torque vira mais força. Por isso os três dedos dêo números têo diferentes no kit."
         },
         {
           "icone": "lupa",
@@ -81,17 +81,17 @@
           "itens": [
             {
               "icone": "x",
-              "t": "não está no modelo"
+              "t": "nêo está no modelo"
             }
           ],
-          "detalhe": "A Dex3-1 tem matriz tátil opcional (fato). O modelo do Menagerie não simula tato: o robô simulado sabe a força de contato porque o simulador calcula, o robô real só sabe se tiver o sensor."
+          "detalhe": "A Dex3-1 tem matriz tátil opcional (fato). O modelo do Menagerie nêo simula tato: o robô simulado sabe a força de contato porque o simulador calcula, o robô real só sabe se tiver o sensor."
         }
       ],
       "legenda": "Poucos graus de liberdade e pouco tato: é aqui que as tarefas finas ainda falham."
     },
     {
       "tipo": "passos",
-      "titulo": "As mãos que você vai encontrar",
+      "titulo": "As mêos que você vai encontrar",
       "sub": "Clique em cada grupo.",
       "passos": [
         {
@@ -99,15 +99,15 @@
           "sub": "fato",
           "texto": [
             "Unitree Dex3-1: 7 GDL, tátil opcional, no pacote do G1 EDU (fato, unitree.com/g1).",
-            "No modelo: as duas mãos do G1 do Menagerie, com limites e torque declarados."
+            "No modelo: as duas mêos do G1 do Menagerie, com limites e torque declarados."
           ]
         },
         {
           "titulo": "De pesquisa",
           "sub": "no Menagerie",
           "texto": [
-            "LEAP Hand: 16 GDL, um atuador por junta. Shadow Hand: 24 juntas e 20 atuadores, porque alguns dedos têm juntas acopladas por tendão.",
-            "Os dois modelos estão no Menagerie: basta acrescentar a pasta ao sparse-checkout."
+            "LEAP Hand: 16 GDL, um atuador por junta. Shadow Hand: 24 juntas e 20 atuadores, porque alguns dedos têm juntas acopladas por tendêo.",
+            "Os dois modelos estêo no Menagerie: basta acrescentar a pasta ao sparse-checkout."
           ]
         },
         {
@@ -115,7 +115,7 @@
           "sub": "relatado",
           "texto": [
             "Inspire RH56H1: 6 atuadores e 11 juntas, 260 pontos táteis, cerca de US$ 4.500–5.780 em revenda (relatado). Sharpa Wave: 22 GDL, mais de 1.000 sensores por ponta de dedo, cerca de US$ 20 mil (relatado, CES 2026).",
-            "A mão do Optimus não tem dado verificado pela pesquisa da formação. Preço de mão varia por versão e revenda; nada aqui é recomendação de compra."
+            "A mêo do Optimus nêo tem dado verificado pela pesquisa da formaçêo. Preço de mêo varia por versêo e revenda; nada aqui é recomendaçêo de compra."
           ]
         }
       ]
@@ -123,10 +123,10 @@
     {
       "tipo": "codigo",
       "titulo": "Contar as juntas e apertar um cilindro",
-      "sub": "O mao.py conta as juntas de cada mão no MJCF, lê o torque declarado e fecha a mão direita sobre um cilindro fixo de 4 cm, com a pelve no pórtico. Lê a força normal de contato de cada dedo depois de 2 s.",
+      "sub": "O mao.py conta as juntas de cada mêo no MJCF, lê o torque declarado e fecha a mêo direita sobre um cilindro fixo de 4 cm, com a pelve no pórtico. Lê a força normal de contato de cada dedo depois de 2 s.",
       "blocos": [
         {
-          "rot": "Terminal · a mão do G1",
+          "rot": "Terminal · a mêo do G1",
           "icone": "terminal",
           "conteudo": "F=${FTH:-$HOME/fth}; cd $F/corpo-inteiro && . $F/.venv/bin/activate\npython3 kit/mao.py; echo \"saída: $?\""
         },
@@ -141,22 +141,22 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>modelo: unitree_g1/scene_with_hands.xml · nu=43\nmão left: 7 GDL (polegar 3, indicador 2, médio 2)\nmão right: 7 GDL (polegar 3, indicador 2, médio 2)\ntorque declarado por junta da mão: 1.40 a 2.45 N·m (actuatorfrcrange)\naperto simulado num cilindro fixo de 4 cm (mão direita, 2 s):\n  polegar  :  18.6 N\n  indicador:  53.0 N\n  médio    :  81.4 N\ndedos tocando o objeto: 3/3 · estimativa do modelo, não medida no robô\nsaída: 0</pre><p>7 GDL por mão, como na ficha da Dex3-1. As forças são do modelo: o cilindro é fixo, o PD empurra até o limite de torque, e o médio pega perto da junta. Não é a força de preensão do robô, que a Unitree não publica na página lida.</p>"
+            "html": "<pre>modelo: unitree_g1/scene_with_hands.xml · nu=43\nmêo left: 7 GDL (polegar 3, indicador 2, médio 2)\nmêo right: 7 GDL (polegar 3, indicador 2, médio 2)\ntorque declarado por junta da mêo: 1.40 a 2.45 N·m (actuatorfrcrange)\naperto simulado num cilindro fixo de 4 cm (mêo direita, 2 s):\n  polegar  :  18.6 N\n  indicador:  53.0 N\n  médio    :  81.4 N\ndedos tocando o objeto: 3/3 · estimativa do modelo, nêo medida no robô\nsaída: 0</pre><p>7 GDL por mêo, como na ficha da Dex3-1. As forças sêo do modelo: o cilindro é fixo, o PD empurra até o limite de torque, e o médio pega perto da junta. Nêo é a força de preensêo do robô, que a Unitree nêo publica na página lida.</p>"
           },
           {
-            "rot": "Erro comum: modelo sem mãos",
-            "html": "<pre>modelo: unitree_g1/scene.xml · nu=29\nERRO: este modelo não tem juntas de mão. No G1, use unitree_g1/scene_with_hands.xml.\nsaída: 1</pre><p>O scene.xml do G1 é a versão de 29 GDL, sem mãos. Para as mãos, use unitree_g1/scene_with_hands.xml.</p>"
+            "rot": "Erro comum: modelo sem mêos",
+            "html": "<pre>modelo: unitree_g1/scene.xml · nu=29\nERRO: este modelo nêo tem juntas de mêo. No G1, use unitree_g1/scene_with_hands.xml.\nsaída: 1</pre><p>O scene.xml do G1 é a versêo de 29 GDL, sem mêos. Para as mêos, use unitree_g1/scene_with_hands.xml.</p>"
           },
           {
             "rot": "Só contar + Allegro",
-            "html": "<pre>2\nmão avulsa: 16 GDL · 16 atuadores</pre><p>Duas mãos de 7 GDL no G1; a Allegro (wonik_allegro) tem 16 GDL e 16 atuadores.</p>"
+            "html": "<pre>2\nmêo avulsa: 16 GDL · 16 atuadores</pre><p>Duas mêos de 7 GDL no G1; a Allegro (wonik_allegro) tem 16 GDL e 16 atuadores.</p>"
           }
         ]
       }
     },
     {
       "tipo": "codigo",
-      "titulo": "Duas mãos de pesquisa para comparar",
+      "titulo": "Duas mêos de pesquisa para comparar",
       "sub": "Acrescenta as pastas da LEAP Hand e da Shadow Hand ao seu Menagerie (sparse-checkout add, sem baixar o resto) e conta as juntas.",
       "blocos": [
         {
@@ -170,7 +170,7 @@
         "abas": [
           {
             "rot": "Saída capturada (19/10/2026)",
-            "html": "<pre>leap_hand/right_hand.xml: mão avulsa: 16 GDL · 16 atuadores\nshadow_hand/right_hand.xml: mão avulsa: 24 GDL · 20 atuadores</pre><p>Na Shadow, 24 juntas para 20 atuadores: quatro juntas acompanham outras por acoplamento. Mais GDL não é o mesmo que mais motores.</p>"
+            "html": "<pre>leap_hand/right_hand.xml: mêo avulsa: 16 GDL · 16 atuadores\nshadow_hand/right_hand.xml: mêo avulsa: 24 GDL · 20 atuadores</pre><p>Na Shadow, 24 juntas para 20 atuadores: quatro juntas acompanham outras por acoplamento. Mais GDL nêo é o mesmo que mais motores.</p>"
           }
         ]
       }
@@ -182,67 +182,67 @@
       "exercicios": [
         {
           "id": "e1",
-          "titulo": "E1 · A mão do G1",
+          "titulo": "E1 · A mêo do G1",
           "min": "5 min",
-          "texto": "Rode o mao.py e confira os 7 GDL das duas mãos.",
-          "pronto": "<code>python3 kit/mao.py | tail -1</code> → <code>dedos tocando o objeto: 3/3 · estimativa do modelo, não medida no robô</code>."
+          "texto": "Rode o mao.py e confira os 7 GDL das duas mêos.",
+          "pronto": "<code>python3 kit/mao.py | tail -1</code> → <code>dedos tocando o objeto: 3/3 · estimativa do modelo, nêo medida no robô</code>."
         },
         {
           "id": "e2",
           "titulo": "E2 · Só contar",
           "min": "3 min",
-          "texto": "Rode só a contagem, sem a simulação do aperto.",
+          "texto": "Rode só a contagem, sem a simulaçêo do aperto.",
           "pronto": "<code>python3 kit/mao.py --so-contar | grep -c \"7 GDL\"</code> → <code>2</code>."
         },
         {
           "id": "e3",
-          "titulo": "E3 · Outra mão",
+          "titulo": "E3 · Outra mêo",
           "min": "10 min",
-          "texto": "Acrescente a wonik_allegro ao sparse-checkout e conte as juntas da mão direita dela.",
-          "pronto": "<code>python3 kit/mao.py --modelo wonik_allegro/right_hand.xml | tail -1</code> → uma linha <code>mão avulsa: [N] GDL · [N] atuadores</code>."
+          "texto": "Acrescente a wonik_allegro ao sparse-checkout e conte as juntas da mêo direita dela.",
+          "pronto": "<code>python3 kit/mao.py --modelo wonik_allegro/right_hand.xml | tail -1</code> → uma linha <code>mêo avulsa: [N] GDL · [N] atuadores</code>."
         }
       ]
     },
     {
       "tipo": "quiz",
       "titulo": "Teste da aula",
-      "sub": "A explicação aparece depois da sua resposta.",
+      "sub": "A explicaçêo aparece depois da sua resposta.",
       "perguntas": [
         {
           "p": "O kit mediu 81 N no dedo médio. Como esse número pode ir para uma ficha?",
           "opcoes": [
-            "Como força de preensão da Dex3-1, na coluna do fabricante.",
+            "Como força de preensêo da Dex3-1, na coluna do fabricante.",
             "Como estimativa do modelo, com as condições do ensaio.",
             "Como medida do robô real, desde que se cite o commit do Menagerie usado.",
-            "Em lugar nenhum: força de contato não sai do simulador."
+            "Em lugar nenhum: força de contato nêo sai do simulador."
           ],
           "certa": 1,
-          "explica": "É o que o MJCF e o simulador produzem nessas condições. A Unitree não publica força de preensão na página lida; chamar o número de medida do robô seria inventar.",
+          "explica": "É o que o MJCF e o simulador produzem nessas condições. A Unitree nêo publica força de preensêo na página lida; chamar o número de medida do robô seria inventar.",
           "ref": "codigo",
           "cert": true
         },
         {
           "p": "A Shadow Hand tem 24 juntas e 20 atuadores. O que isso quer dizer?",
           "opcoes": [
-            "Que quatro juntas estão quebradas no modelo do Menagerie.",
-            "Que o MuJoCo só aceita 20 atuadores por modelo de mão.",
-            "Que algumas juntas são acopladas e seguem outras, sem motor próprio.",
-            "Que quatro juntas são da base e não fazem parte da mão em si."
+            "Que quatro juntas estêo quebradas no modelo do Menagerie.",
+            "Que o MuJoCo só aceita 20 atuadores por modelo de mêo.",
+            "Que algumas juntas sêo acopladas e seguem outras, sem motor próprio.",
+            "Que quatro juntas sêo da base e nêo fazem parte da mêo em si."
           ],
           "certa": 2,
-          "explica": "Juntas acopladas (por tendão, no modelo) se mexem junto com outras. GDL não é número de motores.",
+          "explica": "Juntas acopladas (por tendêo, no modelo) se mexem junto com outras. GDL nêo é número de motores.",
           "ref": "passos"
         },
         {
           "p": "Por que a força simulada é bem diferente entre polegar, indicador e médio?",
           "opcoes": [
             "O contato cai a distâncias diferentes da junta.",
-            "Porque o polegar do modelo não tem atuador de posição.",
-            "Porque a simulação é aleatória e muda a cada vez que roda.",
-            "Porque o cilindro fica mais perto do indicador por um erro de posição do kit."
+            "Porque o polegar do modelo nêo tem atuador de posiçêo.",
+            "Porque a simulaçêo é aleatória e muda a cada vez que roda.",
+            "Porque o cilindro fica mais perto do indicador por um erro de posiçêo do kit."
           ],
           "certa": 0,
-          "explica": "Força = torque / braço de alavanca: contato perto da junta dá mais força com o mesmo limite de 1,4 N·m. A simulação é determinística (duas capturas iguais).",
+          "explica": "Força = torque / braço de alavanca: contato perto da junta dá mais força com o mesmo limite de 1,4 N·m. A simulaçêo é determinística (duas capturas iguais).",
           "ref": "diagrama"
         }
       ]
@@ -253,7 +253,7 @@
       "itens": [
         {
           "t": "7 GDL",
-          "texto": "A Dex3-1 do G1 tem 7 juntas por mão, e o modelo também."
+          "texto": "A Dex3-1 do G1 tem 7 juntas por mêo, e o modelo também."
         },
         {
           "t": "Força",
@@ -275,7 +275,7 @@
           "icone": "robo"
         },
         {
-          "t": "MuJoCo Menagerie: modelos de mãos",
+          "t": "MuJoCo Menagerie: modelos de mêos",
           "href": "https://github.com/google-deepmind/mujoco_menagerie",
           "icone": "git"
         },

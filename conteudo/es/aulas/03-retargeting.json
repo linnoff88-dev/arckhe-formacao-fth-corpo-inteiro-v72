@@ -183,7 +183,7 @@
           },
           {
             "rot": "Error común: ambiente equivocado",
-            "html": "<pre>ERRO: o GMR não está neste ambiente (No module named 'general_motion_retargeting'). Ative ~/fth/.venv-gmr (aula 3).\nsaída: 2</pre><p>Se ejecutó con el .venv de MuJoCo activo. El GMR solo existe en el .venv-gmr: actívalo (<code>. ~/fth/.venv-gmr/bin/activate</code>) y ejecuta de nuevo.</p>"
+            "html": "<pre>ERRO: o GMR nêo está neste ambiente (No module named 'general_motion_retargeting'). Ative ~/fth/.venv-gmr (aula 3).\nsaída: 2</pre><p>Se ejecutó con el .venv de MuJoCo activo. El GMR solo existe en el .venv-gmr: actívalo (<code>. ~/fth/.venv-gmr/bin/activate</code>) y ejecuta de nuevo.</p>"
           }
         ]
       }

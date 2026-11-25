@@ -149,15 +149,15 @@
         "abas": [
           {
             "rot": "Salida capturada (19/10/2026)",
-            "html": "<pre>GMR bb1bbe4 (2026-04-02)\narquivo: 251021_04_boxing_120Hz_cm_3DsMax.bvh\nraiz: Hips · juntas: 23 · pontas (End Site): 5 · canais por quadro: 72\nordem de rotação: Yrotation Xrotation Zrotation · unidade provável: cm (maior OFFSET 43.3)\nquadros: 4249 · fps: 120 · duração: 35.4 s\nlinhas de movimento conferidas: 4249/4249\nsaída: 0</pre><p>23 articulaciones con 3 canales de rotación y la raíz con 3 de posición más: 72 números por cuadro. Frame Time de 0,008333 s = 120 cuadros por segundo.</p>"
+            "html": "<pre>GMR bb1bbe4 (2026-04-02)\narquivo: 251021_04_boxing_120Hz_cm_3DsMax.bvh\nraiz: Hips · juntas: 23 · pontas (End Site): 5 · canais por quadro: 72\nordem de rotaçêo: Yrotation Xrotation Zrotation · unidade provável: cm (maior OFFSET 43.3)\nquadros: 4249 · fps: 120 · duraçêo: 35.4 s\nlinhas de movimento conferidas: 4249/4249\nsaída: 0</pre><p>23 articulaciones con 3 canales de rotación y la raíz con 3 de posición más: 72 números por cuadro. Frame Time de 0,008333 s = 120 cuadros por segundo.</p>"
           },
           {
             "rot": "Error común: clip cortado",
-            "html": "<pre>arquivo: cortado.bvh\nraiz: Hips · juntas: 23 · pontas (End Site): 5 · canais por quadro: 72\nordem de rotação: Yrotation Xrotation Zrotation · unidade provável: cm (maior OFFSET 43.3)\nquadros: 4249 · fps: 120 · duração: 35.4 s\nlinhas de movimento conferidas: 4000/4249\nsaída: 1</pre><p>El encabezado promete 4249 cuadros y el archivo solo tiene 4000 líneas (descarga interrumpida, copia parcial). El script sale con código 1 en lugar de dejar que el retargeting corra con el final faltando.</p>"
+            "html": "<pre>arquivo: cortado.bvh\nraiz: Hips · juntas: 23 · pontas (End Site): 5 · canais por quadro: 72\nordem de rotaçêo: Yrotation Xrotation Zrotation · unidade provável: cm (maior OFFSET 43.3)\nquadros: 4249 · fps: 120 · duraçêo: 35.4 s\nlinhas de movimento conferidas: 4000/4249\nsaída: 1</pre><p>El encabezado promete 4249 cuadros y el archivo solo tiene 4000 líneas (descarga interrumpida, copia parcial). El script sale con código 1 en lugar de dejar que el retargeting corra con el final faltando.</p>"
           },
           {
             "rot": "E2: 90 cuadros",
-            "html": "<pre>gravado: ~/fth/movimentos/aceno.bvh (90 quadros a 30 Hz)\nquadros: 90 · fps: 30 · duração: 3.0 s</pre><p>90 cuadros a 30 Hz = 3 s.</p>"
+            "html": "<pre>gravado: ~/fth/movimentos/aceno.bvh (90 quadros a 30 Hz)\nquadros: 90 · fps: 30 · duraçêo: 3.0 s</pre><p>90 cuadros a 30 Hz = 3 s.</p>"
           }
         ]
       }
@@ -178,7 +178,7 @@
         "abas": [
           {
             "rot": "Salida capturada (19/10/2026)",
-            "html": "<pre>gravado: ~/fth/movimentos/aceno.bvh (60 quadros a 30 Hz)\narquivo: aceno.bvh\nraiz: Hips · juntas: 5 · pontas (End Site): 2 · canais por quadro: 18\nordem de rotação: Zrotation Xrotation Yrotation · unidade provável: cm (maior OFFSET 30.0)\nquadros: 60 · fps: 30 · duração: 2.0 s\nlinhas de movimento conferidas: 60/60\nsaída: 0</pre><p>3 canales por articulación + 3 de posición de la raíz = 18. La misma lectura sirve para cualquier BVH.</p>"
+            "html": "<pre>gravado: ~/fth/movimentos/aceno.bvh (60 quadros a 30 Hz)\narquivo: aceno.bvh\nraiz: Hips · juntas: 5 · pontas (End Site): 2 · canais por quadro: 18\nordem de rotaçêo: Zrotation Xrotation Yrotation · unidade provável: cm (maior OFFSET 30.0)\nquadros: 60 · fps: 30 · duraçêo: 2.0 s\nlinhas de movimento conferidas: 60/60\nsaída: 0</pre><p>3 canales por articulación + 3 de posición de la raíz = 18. La misma lectura sirve para cualquier BVH.</p>"
           }
         ]
       }
@@ -200,7 +200,7 @@
           "titulo": "E2 · Tu saludo más lento",
           "min": "5 min",
           "texto": "Genera el saludo con 90 cuadros a 30 Hz y léelo de nuevo.",
-          "pronto": "<code>python3 kit/bvh_minimo.py --quadros 90 && python3 kit/ler_clipe.py ~/fth/movimentos/aceno.bvh | grep quadros</code> → <code>quadros: 90 · fps: 30 · duração: 3.0 s</code>."
+          "pronto": "<code>python3 kit/bvh_minimo.py --quadros 90 && python3 kit/ler_clipe.py ~/fth/movimentos/aceno.bvh | grep quadros</code> → <code>quadros: 90 · fps: 30 · duraçêo: 3.0 s</code>."
         },
         {
           "id": "e3",

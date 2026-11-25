@@ -154,11 +154,11 @@
         "abas": [
           {
             "rot": "Salida capturada (19/10/2026)",
-            "html": "<pre>comando 1 · alcancar direita (0.3, -0.2, 0.15) → executado: sim (mão a 1.1 cm do alvo)\ncomando 2 · girar_tronco 20° → executado: sim\ncomando 3 · alcancar esquerda (0.3, 0.25, 0.2) → executado: sim (mão a 1.0 cm do alvo)\ncomando 4 · voltar → executado: sim\nrobô de pé: sim · pelve a 0.79 m\nexecutado: sim\nsaída: 0</pre><p>Cuatro comandos, cuatro ejecuciones, mano a cerca de 1 cm de cada objetivo y el robot de pie al final.</p>"
+            "html": "<pre>comando 1 · alcancar direita (0.3, -0.2, 0.15) → executado: sim (mêo a 1.1 cm do alvo)\ncomando 2 · girar_tronco 20° → executado: sim\ncomando 3 · alcancar esquerda (0.3, 0.25, 0.2) → executado: sim (mêo a 1.0 cm do alvo)\ncomando 4 · voltar → executado: sim\nrobô de pé: sim · pelve a 0.79 m\nexecutado: sim\nsaída: 0</pre><p>Cuatro comandos, cuatro ejecuciones, mano a cerca de 1 cm de cada objetivo y el robot de pie al final.</p>"
           },
           {
             "rot": "Error común: comando imposible",
-            "html": "<pre>comando 1 · alcancar direita (0.9, -0.2, 0.15) → recusado: alvo a 0.92 m do ombro; o braço alcança 0.38 m\ncomando 2 · girar_tronco 200° → recusado: fora do limite da cintura (-150° a 150°)\ncomando 3 · pular → recusado: ação desconhecida (conheço alcancar, girar_tronco, voltar)\nrobô de pé: sim · pelve a 0.79 m\nexecutado: não · 3 comando(s) recusado(s)\nsaída: 1</pre><p>Objetivo a 92 cm del hombro (el brazo alcanza 38 cm hasta la muñeca), cintura a 200° (el límite es 150°) y una acción que no existe: los tres se rechazan antes de cualquier movimiento, y el robot sigue quieto y de pie.</p>"
+            "html": "<pre>comando 1 · alcancar direita (0.9, -0.2, 0.15) → recusado: alvo a 0.92 m do ombro; o braço alcança 0.38 m\ncomando 2 · girar_tronco 200° → recusado: fora do limite da cintura (-150° a 150°)\ncomando 3 · pular → recusado: açêo desconhecida (conheço alcancar, girar_tronco, voltar)\nrobô de pé: sim · pelve a 0.79 m\nexecutado: nêo · 3 comando(s) recusado(s)\nsaída: 1</pre><p>Objetivo a 92 cm del hombro (el brazo alcanza 38 cm hasta la muñeca), cintura a 200° (el límite es 150°) y una acción que no existe: los tres se rechazan antes de cualquier movimiento, y el robot sigue quieto y de pie.</p>"
           }
         ]
       }
@@ -180,7 +180,7 @@
           "titulo": "E2 · Comandos malos",
           "min": "5 min",
           "texto": "Ejecuta el archivo de comandos malos y lee el motivo de cada rechazo.",
-          "pronto": "<code>python3 kit/comando_wbc.py --comandos kit/comandos-ruins.json | tail -1</code> → <code>executado: não · 3 comando(s) recusado(s)</code>."
+          "pronto": "<code>python3 kit/comando_wbc.py --comandos kit/comandos-ruins.json | tail -1</code> → <code>executado: nêo · 3 comando(s) recusado(s)</code>."
         },
         {
           "id": "e3",

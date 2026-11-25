@@ -149,15 +149,15 @@
         "abas": [
           {
             "rot": "Captured output (10/19/2026)",
-            "html": "<pre>GMR bb1bbe4 (2026-04-02)\narquivo: 251021_04_boxing_120Hz_cm_3DsMax.bvh\nraiz: Hips · juntas: 23 · pontas (End Site): 5 · canais por quadro: 72\nordem de rotação: Yrotation Xrotation Zrotation · unidade provável: cm (maior OFFSET 43.3)\nquadros: 4249 · fps: 120 · duração: 35.4 s\nlinhas de movimento conferidas: 4249/4249\nsaída: 0</pre><p>23 joints with 3 rotation channels, plus 3 extra position channels on the root: 72 numbers per frame. Frame Time of 0.008333 s = 120 frames per second.</p>"
+            "html": "<pre>GMR bb1bbe4 (2026-04-02)\narquivo: 251021_04_boxing_120Hz_cm_3DsMax.bvh\nraiz: Hips · juntas: 23 · pontas (End Site): 5 · canais por quadro: 72\nordem de rotaçêo: Yrotation Xrotation Zrotation · unidade provável: cm (maior OFFSET 43.3)\nquadros: 4249 · fps: 120 · duraçêo: 35.4 s\nlinhas de movimento conferidas: 4249/4249\nsaída: 0</pre><p>23 joints with 3 rotation channels, plus 3 extra position channels on the root: 72 numbers per frame. Frame Time of 0.008333 s = 120 frames per second.</p>"
           },
           {
             "rot": "Common error: a truncated clip",
-            "html": "<pre>arquivo: cortado.bvh\nraiz: Hips · juntas: 23 · pontas (End Site): 5 · canais por quadro: 72\nordem de rotação: Yrotation Xrotation Zrotation · unidade provável: cm (maior OFFSET 43.3)\nquadros: 4249 · fps: 120 · duração: 35.4 s\nlinhas de movimento conferidas: 4000/4249\nsaída: 1</pre><p>The header promises 4249 frames and the file has only 4000 lines (interrupted download, partial copy). The script exits with code 1 instead of letting retargeting run with the end missing.</p>"
+            "html": "<pre>arquivo: cortado.bvh\nraiz: Hips · juntas: 23 · pontas (End Site): 5 · canais por quadro: 72\nordem de rotaçêo: Yrotation Xrotation Zrotation · unidade provável: cm (maior OFFSET 43.3)\nquadros: 4249 · fps: 120 · duraçêo: 35.4 s\nlinhas de movimento conferidas: 4000/4249\nsaída: 1</pre><p>The header promises 4249 frames and the file has only 4000 lines (interrupted download, partial copy). The script exits with code 1 instead of letting retargeting run with the end missing.</p>"
           },
           {
             "rot": "E2: 90 frames",
-            "html": "<pre>gravado: ~/fth/movimentos/aceno.bvh (90 quadros a 30 Hz)\nquadros: 90 · fps: 30 · duração: 3.0 s</pre><p>90 frames at 30 Hz = 3 s.</p>"
+            "html": "<pre>gravado: ~/fth/movimentos/aceno.bvh (90 quadros a 30 Hz)\nquadros: 90 · fps: 30 · duraçêo: 3.0 s</pre><p>90 frames at 30 Hz = 3 s.</p>"
           }
         ]
       }
@@ -178,7 +178,7 @@
         "abas": [
           {
             "rot": "Captured output (10/19/2026)",
-            "html": "<pre>gravado: ~/fth/movimentos/aceno.bvh (60 quadros a 30 Hz)\narquivo: aceno.bvh\nraiz: Hips · juntas: 5 · pontas (End Site): 2 · canais por quadro: 18\nordem de rotação: Zrotation Xrotation Yrotation · unidade provável: cm (maior OFFSET 30.0)\nquadros: 60 · fps: 30 · duração: 2.0 s\nlinhas de movimento conferidas: 60/60\nsaída: 0</pre><p>3 channels per joint + 3 for the root position = 18. The same reading works for any BVH.</p>"
+            "html": "<pre>gravado: ~/fth/movimentos/aceno.bvh (60 quadros a 30 Hz)\narquivo: aceno.bvh\nraiz: Hips · juntas: 5 · pontas (End Site): 2 · canais por quadro: 18\nordem de rotaçêo: Zrotation Xrotation Yrotation · unidade provável: cm (maior OFFSET 30.0)\nquadros: 60 · fps: 30 · duraçêo: 2.0 s\nlinhas de movimento conferidas: 60/60\nsaída: 0</pre><p>3 channels per joint + 3 for the root position = 18. The same reading works for any BVH.</p>"
           }
         ]
       }
@@ -200,7 +200,7 @@
           "titulo": "E2 · Your slower wave",
           "min": "5 min",
           "texto": "Generate the wave with 90 frames at 30 Hz and read it again.",
-          "pronto": "<code>python3 kit/bvh_minimo.py --quadros 90 && python3 kit/ler_clipe.py ~/fth/movimentos/aceno.bvh | grep quadros</code> → <code>quadros: 90 · fps: 30 · duração: 3.0 s</code>."
+          "pronto": "<code>python3 kit/bvh_minimo.py --quadros 90 && python3 kit/ler_clipe.py ~/fth/movimentos/aceno.bvh | grep quadros</code> → <code>quadros: 90 · fps: 30 · duraçêo: 3.0 s</code>."
         },
         {
           "id": "e3",

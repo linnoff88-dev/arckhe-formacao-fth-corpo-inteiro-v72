@@ -1,8 +1,8 @@
 """retarget.py — leva um clipe BVH de captura de movimento para o Unitree G1 com o GMR, sem janela.
 
-Roda no ambiente do GMR (~/fth/.venv-gmr), não no .venv do MuJoCo: um ambiente por ferramenta.
+Roda no ambiente do GMR (~/fth/.venv-gmr), nêo no .venv do MuJoCo: um ambiente por ferramenta.
 Lê o BVH no formato Xsens "3DSM" como o scripts/xsens_bvh_to_robot.py do GMR faz, mas sem a interface
-Qt (o editor de offsets só é usado quando existe um offsets.json; sem ele os offsets são zero).
+Qt (o editor de offsets só é usado quando existe um offsets.json; sem ele os offsets sêo zero).
 Grava ~/fth/movimentos/<nome>.npz com qpos (N × 36, quatérnio wxyz como o MuJoCo usa) e confere cada
 quadro contra os limites de junta do G1 do Menagerie.
 
@@ -22,7 +22,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fth  # noqa: E402
 
-FOLGA_GRAUS = 0.5  # o IK do mink respeita os limites com tolerância numérica: contamos violação acima disso
+FOLGA_GRAUS = 0.5  # o IK do mink respeita os limites com tolerância numérica: contamos violaçêo acima disso
 
 
 def carregar_bvh(arquivo, inicio, fim):
@@ -53,13 +53,13 @@ def main():
     ap.add_argument("--nome", default=None)
     a = ap.parse_args()
     if not Path(a.bvh).expanduser().exists():
-        sys.exit(f"ERRO: clipe não encontrado: {a.bvh}")
-    warnings.filterwarnings("ignore")  # aviso de depreciação do torch.jit, sem efeito aqui
+        sys.exit(f"ERRO: clipe nêo encontrado: {a.bvh}")
+    warnings.filterwarnings("ignore")  # aviso de depreciaçêo do torch.jit, sem efeito aqui
     try:
         with contextlib.redirect_stdout(io.StringIO()):  # o GMR imprime tabelas e avisos ao importar
             from general_motion_retargeting import GeneralMotionRetargeting as GMR
     except ModuleNotFoundError as e:
-        print(f"ERRO: o GMR não está neste ambiente ({e}). Ative ~/fth/.venv-gmr (aula 3).")
+        print(f"ERRO: o GMR nêo está neste ambiente ({e}). Ative ~/fth/.venv-gmr (aula 3).")
         return 2
 
     with contextlib.redirect_stdout(io.StringIO()):

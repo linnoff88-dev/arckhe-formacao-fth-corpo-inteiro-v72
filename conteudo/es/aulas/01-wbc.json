@@ -167,7 +167,7 @@
         "abas": [
           {
             "rot": "Salida capturada (19/10/2026)",
-            "html": "<pre>simulado: 2 s · passo de física 2 ms\ntarefa (VLA: S2+S1)      :   10 chamadas (5 Hz)\nS0 corpo inteiro (IK)    :  100 chamadas (50 Hz)\nPD do motor + física     : 1000 passos   (500 Hz)\nmão direita a 0.7 cm do último alvo · pelve a 0.79 m · de pé: sim\n3 camadas\nsaída: 0</pre><p>1000 pasos del PD por 100 decisiones del S0 y 10 de la tarea. La mano termina a menos de 1 cm del último objetivo y el robot sigue de pie.</p>"
+            "html": "<pre>simulado: 2 s · passo de física 2 ms\ntarefa (VLA: S2+S1)      :   10 chamadas (5 Hz)\nS0 corpo inteiro (IK)    :  100 chamadas (50 Hz)\nPD do motor + física     : 1000 passos   (500 Hz)\nmêo direita a 0.7 cm do último alvo · pelve a 0.79 m · de pé: sim\n3 camadas\nsaída: 0</pre><p>1000 pasos del PD por 100 decisiones del S0 y 10 de la tarea. La mano termina a menos de 1 cm del último objetivo y el robot sigue de pie.</p>"
           },
           {
             "rot": "Error común: frecuencia que no divide",
