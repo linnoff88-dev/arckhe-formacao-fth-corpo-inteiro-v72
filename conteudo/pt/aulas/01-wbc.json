@@ -133,7 +133,7 @@
         {
           "rot": "Terminal · preparar ~/fth",
           "icone": "terminal",
-          "conteudo": "F=${FTH:-$HOME/fth}; mkdir -p $F && cd $F\n[ -d .venv ] || python3.12 -m venv .venv\n. .venv/bin/activate && pip install -q mujoco==3.16.0 numpy\n[ -d corpo-inteiro ] || git clone -q --depth 1 https://github.com/inematds/formacao-fth-corpo-inteiro-v72 corpo-inteiro\n[ -d mujoco_menagerie ] || git clone -q --filter=blob:none --sparse https://github.com/google-deepmind/mujoco_menagerie\ncd mujoco_menagerie && git sparse-checkout add unitree_g1\ngit checkout -q 62ab00f && git log -1 --format='menagerie %h (%ad)' --date=short\npython3 -c \"import mujoco, numpy; print('mujoco', mujoco.__version__, '· numpy', numpy.__version__)\""
+          "conteudo": "F=${FTH:-$HOME/fth}; mkdir -p $F && cd $F\n[ -d .venv ] || python3.12 -m venv .venv\n. .venv/bin/activate && pip install -q mujoco==3.16.0 numpy\n[ -d corpo-inteiro ] || git clone -q --depth 1 https://github.com/linnoff88-dev/formacao-fth-corpo-inteiro-v72 corpo-inteiro\n[ -d mujoco_menagerie ] || git clone -q --filter=blob:none --sparse https://github.com/google-deepmind/mujoco_menagerie\ncd mujoco_menagerie && git sparse-checkout add unitree_g1\ngit checkout -q 62ab00f && git log -1 --format='menagerie %h (%ad)' --date=short\npython3 -c \"import mujoco, numpy; print('mujoco', mujoco.__version__, '· numpy', numpy.__version__)\""
         }
       ],
       "saida": {
@@ -298,12 +298,12 @@
         },
         {
           "t": "VLA v7.2, aula 2: a hierarquia vista de cima",
-          "href": "https://inematds.github.io/vla-v72/aulas/anatomia/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/aulas/anatomia/",
           "icone": "cerebro"
         },
         {
           "t": "FTH 0, aula 6: centro de massa e polígono de apoio",
-          "href": "https://inematds.github.io/formacao-fth-anatomia-v72/aulas/equilibrio/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/aulas/equilibrio/",
           "icone": "robo"
         }
       ]
